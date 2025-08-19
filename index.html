@@ -1,118 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>『종교혁명』 — 동영상 & 연재물(한글)</title>
-  <meta name="description" content="유튜브 동영상과 저서 『하나님과의 대화』 연재물(총 36개 PDF) 아카이브. 광고 없이 한눈에 볼 수 있도록 정리했습니다.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕊️</text></svg>">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>『Conversation with Oneness God』 시리즈 (KR)</title>
+  <meta name="description" content="『Conversation with Oneness God』 한국어 시리즈: PDF/영상 인덱스" />
   <style>
-    :root{
-      --bg:#0b0b10;--panel:#12131a;--muted:#9aa3b2;--text:#eaf0ff;
-      --accent:#4ea1ff;--accent2:#8bd1ff;--border:#1f2230;--shadow:0 10px 26px rgba(0,0,0,.35)
-    }
+    :root{--bg:#0b0f14;--panel:#111723;--card:#0f172a;--text:#e5e7eb;--muted:#93a4b1;--border:#1f2a37;}
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Malgun Gothic,sans-serif;background:#0b0b10;color:var(--text);line-height:1.65}
-    .wrap{max-width:1080px;margin:0 auto;padding:28px 18px 80px}
-    header{background:linear-gradient(180deg, rgba(78,161,255,.12), transparent);border:1px solid var(--border);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
-    h1{margin:0 0 8px;font-size:28px}
-    .sub{color:var(--muted);margin:0 0 16px}
-    .btnrow{display:flex;gap:10px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--panel);color:var(--text);text-decoration:none;font-weight:600}
-    .btn:hover{transform:translateY(-1px);border-color:#2b3150}
-    .btn.accent{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06121f;border-color:transparent}
-    section{background:rgba(18,19,26,.55);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:18px 20px;margin-top:20px}
-    h2{margin:4px 0 10px;font-size:20px}
-    /* ===== 그리드(한눈에 보기) ===== */
-    .grid{list-style:none;padding:0;margin:10px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .card{background:#15161d;border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:110px}
-    .title{font-weight:700}
-    .badge{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;background:rgba(78,161,255,.18);color:#cfe5ff;border:1px solid #264b74}
-    .link{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#a7c8ff}
-    .link:hover{opacity:.92;text-decoration:underline}
-    .muted{color:var(--muted);font-size:12px}
-    /* 버튼 아이콘 느낌 */
-    .ico{font-weight:900}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto}
+    a{color:#79c0ff;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1000px;margin:0 auto;padding:28px 16px 80px}
+    header{margin-bottom:18px}
+    h1{margin:0 0 6px;font-size:24px}
+    p.meta{margin:0;color:var(--muted);font-size:14px}
+    .list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:800px){.list{grid-template-columns:1fr}}
+    .item{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px}
+    .name{font-weight:700;margin:2px 0 6px}
+    .meta{font-size:12px;color:var(--muted);margin-bottom:6px}
+    .actions{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;padding:8px 10px;font-size:13px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)}
+    .btn:hover{background:#0b1220}
+    .badge{display:inline-block;font-size:11px;padding:3px 8px;border-radius:999px;border:1px solid var(--border);background:var(--card);margin-right:8px}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>『종교혁명』 — 동영상 & 연재물(한글)</h1>
-      <p class="sub">유튜브 동영상은 상단 목록을 수시로 업데이트하고, 하단에는 저서 <b>「하나님과의 대화」 연재물(PDF, 총 36개)</b>을 한눈에 볼 수 있게 정리했습니다.</p>
-      <div class="btnrow">
-        <a class="btn accent" href="https://bykim5710.github.io/series/" target="_blank" rel="noopener">🌐 영문 시리즈로 이동</a>
-        <a class="btn" href="#videos">▶️ 한글 동영상 바로가기</a>
-        <a class="btn" href="#archive">📚 [저서 "하나님과의 대화" 연재물]</a>
-        <a class="btn" href="https://www.youtube.com/channel/UCxd8XnqtIjPmbQLNB1cG0xQ" target="_blank" rel="noopener">📺 유튜브 채널</a>
+<div class="wrap">
+  <header>
+    <h1>『Conversation with Oneness God』 시리즈 (KR)</h1>
+    <p class="meta">정렬 순서: 목차와 프로필 → 1회 → 1-1회 → 2회~34회</p>
+  </header>
+
+  <div class="list">
+
+    <!-- 0. 목차와 프로필 -->
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>목차와 프로필</div>
+      <div class="meta">PDF</div>
+      <div class="actions">
+        <a class="btn" href="./목차와 프로필.pdf">열기</a>
+        <a class="btn" href="./목차와 프로필.pdf" download>다운로드</a>
       </div>
-    </header>
+    </div>
 
-    <!-- 동영상(1~10회, 주기적 추가) -->
-    <section id="videos">
-      <h2>한글 동영상 (업데이트 중)</h2>
-      <ul class="grid">
-        <li class="card"><div class="title">제1회: 저자 책 및 신통신통회 소개</div><a class="link" href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-        <li class="card"><div class="title">제2회: 왜 종교혁명이 필요한가? — 기독교민주주의</div><a class="link" href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-        <li class="card"><div class="title">제3회: 왜 종교혁명인가? — 종교개혁의 미완성</div><a class="link" href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-        <li class="card"><div class="title">제4회: 왜 종교혁명인가 — 기본으로 돌아가자</div><a class="link" href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-        <li class="card"><div class="title">제5회: 기독교계에 보낸 편지</div><a class="link" href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-        <li class="card"><div class="title">제6회: 종교혁명선언서</div><a class="link" href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-        <li class="card"><div class="title">제7회: 무유와 전이</div><a class="link" href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-        <li class="card"><div class="title">제8회: 공·무·영 — 무유와 쿼크</div><a class="link" href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-        <li class="card"><div class="title">제9회: 사후세계 — 전이계</div><a class="link" href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-        <li class="card"><div class="title">제10회: 하나임(Oneness)</div><a class="link" href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener"><span class="ico">📺</span> YouTube</a></li>
-      </ul>
-      <p class="muted">※ 새 영상이 올라오면 위 그리드에 11회, 12회… 항목을 한 줄 추가해 주세요.</p>
-    </section>
+    <!-- 1. 1회 저자 소개와 책 소개 -->
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>1회 저자 소개와 책 소개</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./1회 저자 소개와 책 소개.pdf">열기</a>
+        <a class="btn" href="./1회 저자 소개와 책 소개.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
 
-    <!-- 연재물 36개: 가로 그리드 -->
-    <section id="archive">
-      <h2>저서 「하나님과의 대화」 연재물 (총 36개 · PDF)</h2>
-      <ul class="grid">
-        <li class="card"><span class="badge">프롤로그</span><div class="title">목차와 프로필</div><a class="link" href="목차와 프로필.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><span class="badge">프롤로그</span><div class="title">1-1회: 추천사</div><a class="link" href="1-1회 추천사.pdf" target="_blank">📄 PDF 다운로드</a></li>
+    <!-- 1-1. 추천사 -->
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>1-1회 추천사</div>
+      <div class="meta">PDF</div>
+      <div class="actions">
+        <a class="btn" href="./1-1회 추천사.pdf">열기</a>
+        <a class="btn" href="./1-1회 추천사.pdf" download>다운로드</a>
+      </div>
+    </div>
 
-        <li class="card"><div class="title">1회: 저자 책 및 신통신통회 소개</div><a class="link" href="1회 저자 소개와 책 소개.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">2회: 대홍수와 출애굽기</div><a class="link" href="2회 대홍수와 출애굽기.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">3회: 창조론과 진화론</div><a class="link" href="3회 창조론과 진화론.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">4회: 구약성경의 기록 오류-1</div><a class="link" href="4회 구약성경의 기록 오류-1.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">5회: 구약성경의 기록 오류-2</div><a class="link" href="5회 구약성경의 기록 오류 -2.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">6회: 구약성경의 윤리적 문제-잔혹성</div><a class="link" href="6회 구약성경의 윤리적 문제-잔혹성.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">7회: 구약성경의 윤리적 문제-문란성</div><a class="link" href="7회 구약성경의 윤리적 문제-문란성.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">8회: 구약성경의 역사적 고찰</div><a class="link" href="8회 구약성경의 역사적 고찰.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">9회: 구약성경의 기록 시점</div><a class="link" href="9회 구약성경의 기록 시점.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">10회: 구약성경의 효용과 한계</div><a class="link" href="10회 구약성경의 효용과 한계.pdf" target="_blank">📄 PDF 다운로드</a></li>
+    <!-- 2 ~ 10 (유튜브 포함) -->
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>2회 구약성경의 기록 오류-1</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./2회 구약성경의 기록 오류-1.pdf">열기</a>
+        <a class="btn" href="./2회 구약성경의 기록 오류-1.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
 
-        <li class="card"><div class="title">11회: 구약성경 vs. 신약성경</div><a class="link" href="11회 구약성경 vs. 신약성경.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">12회: 예수의 탄생</div><a class="link" href="12회 예수의 탄생.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">13회: 동정녀 마리아</div><a class="link" href="13회 동정녀 마리아.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">14회: 예수의 성매매 진실</div><a class="link" href="14회 예수의 성매매 진실.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">15회: 막달라 마리아</div><a class="link" href="15회 막달라 마리아.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">16회: 성경의 기적</div><a class="link" href="16회 성경의 기적.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">17회: 예수의 죽음</div><a class="link" href="17회 예수의 죽음.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">18회: 예수의 부활과 승천</div><a class="link" href="18회 예수의 부활과 승천.pdf" target="_blank">📄 PDF 다운로드</a></li>
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>3회 구약성경의 기록 오류-2</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./3회 구약성경의 기록 오류-2.pdf">열기</a>
+        <a class="btn" href="./3회 구약성경의 기록 오류-2.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
 
-        <li class="card"><div class="title">19회: 바울과 베드로</div><a class="link" href="19회 바울과 베드로.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">20회: 복음서 차이와 신약성경 내의 복음</div><a class="link" href="20회 복음서 차이와 신약성경 내의 복음.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">21회: 영혼과 부활</div><a class="link" href="21회 영혼과 부활.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">22회: 윤회와 원죄설과 대속설</div><a class="link" href="22회 윤회와 원죄설과 대속설.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">23회: 사후세계</div><a class="link" href="23회 사후세계.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">24회: 천당 vs. 천국</div><a class="link" href="24회 천당 vs. 천국.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">25회: 지옥 그리고 연옥 외</div><a class="link" href="25회 지옥 그리고 연옥 외.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">26회: 여호와 vs. 하나님</div><a class="link" href="26회 여호와 vs. 하나님.pdf" target="_blank">📄 PDF 다운로드</a></li>
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>4회 (제목: 기본으로 돌아가자/기초로 돌아가자)</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./4회 구약성경의 기록 오류-1.pdf">열기</a>
+        <a class="btn" href="./4회 구약성경의 기록 오류-1.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
 
-        <li class="card"><div class="title">27회: 종교의 본질</div><a class="link" href="27회 종교의 본질.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">28회: 천사와 악마</div><a class="link" href="28회 천사와 악마.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">29회: 존재의 본질</div><a class="link" href="29회 존재의 본질.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">30회: 존재의 본질 사례</div><a class="link" href="30회 존재의 본질 사례.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">31회: 영(零)의 의미</div><a class="link" href="31회 영(零)의 의미.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">32회: 모든 존재는 하나임</div><a class="link" href="32회 모든 존재는 하나임.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">33회: 우리 모두가 하나님</div><a class="link" href="33회 우리 모두가 하나님.pdf" target="_blank">📄 PDF 다운로드</a></li>
-        <li class="card"><div class="title">34회: 끝맺는 말</div><a class="link" href="34회 끝맺는 말.pdf" target="_blank">📄 PDF 다운로드</a></li>
-      </ul>
-      <p class="muted">※ 파일명이 위와 다르다면 링크도 함께 변경해 주세요.</p>
-    </section>
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>5회 구약성경의 기록 오류-2</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./5회 구약성경의 기록 오류-2.pdf">열기</a>
+        <a class="btn" href="./5회 구약성경의 기록 오류-2.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>6회 구약성경의 윤리적 문제-간통죄</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./6회 구약성경의 윤리적 문제-간통죄.pdf">열기</a>
+        <a class="btn" href="./6회 구약성경의 윤리적 문제-간통죄.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>7회 구약성경의 윤리적 문제-문란성</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./7회 구약성경의 윤리적 문제-문란성.pdf">열기</a>
+        <a class="btn" href="./7회 구약성경의 윤리적 문제-문란성.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>8회 구약성경의 역사적 왜곡</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./8회 구약성경의 역사적 왜곡.pdf">열기</a>
+        <a class="btn" href="./8회 구약성경의 역사적 왜곡.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>9회 구약성경의 기록 시점</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./9회 구약성경의 기록 시점.pdf">열기</a>
+        <a class="btn" href="./9회 구약성경의 기록 시점.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>10회 구약성경의 효용과 한계</div>
+      <div class="meta">PDF + YouTube</div>
+      <div class="actions">
+        <a class="btn" href="./10회 구약성경의 효용과 한계.pdf">열기</a>
+        <a class="btn" href="./10회 구약성경의 효용과 한계.pdf" download>다운로드</a>
+        <a class="btn" href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener">영상 보기</a>
+      </div>
+    </div>
+
+    <!-- 11 ~ 34 (PDF 전용) -->
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>11회 구약성경 vs. 신약성경</div>
+      <div class="actions">
+        <a class="btn" href="./11회 구약성경 vs. 신약성경.pdf">열기</a>
+        <a class="btn" href="./11회 구약성경 vs. 신약성경.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>12회 예수의 탄생</div>
+      <div class="actions">
+        <a class="btn" href="./12회 예수의 탄생.pdf">열기</a>
+        <a class="btn" href="./12회 예수의 탄생.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>13회 동정녀 마리아</div>
+      <div class="actions">
+        <a class="btn" href="./13회 동정녀 마리아.pdf">열기</a>
+        <a class="btn" href="./13회 동정녀 마리아.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>14회 예수의 성매매 진실</div>
+      <div class="actions">
+        <a class="btn" href="./14회 예수의 성매매 진실.pdf">열기</a>
+        <a class="btn" href="./14회 예수의 성매매 진실.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>15회 막달라 마리아</div>
+      <div class="actions">
+        <a class="btn" href="./15회 막달라 마리아.pdf">열기</a>
+        <a class="btn" href="./15회 막달라 마리아.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>16회 성경의 기적</div>
+      <div class="actions">
+        <a class="btn" href="./16회 성경의 기적.pdf">열기</a>
+        <a class="btn" href="./16회 성경의 기적.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>17회 예수의 죽음</div>
+      <div class="actions">
+        <a class="btn" href="./17회 예수의 죽음.pdf">열기</a>
+        <a class="btn" href="./17회 예수의 죽음.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>18회 예수의 부활과 승천</div>
+      <div class="actions">
+        <a class="btn" href="./18회 예수의 부활과 승천.pdf">열기</a>
+        <a class="btn" href="./18회 예수의 부활과 승천.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>19회 바울과 베드로</div>
+      <div class="actions">
+        <a class="btn" href="./19회 바울과 베드로.pdf">열기</a>
+        <a class="btn" href="./19회 바울과 베드로.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>20회 종교와 신앙의 차이와 신약성경 내의 복음</div>
+      <div class="actions">
+        <a class="btn" href="./20회 종교와 신앙의 차이와 신약성경 내의 복음.pdf">열기</a>
+        <a class="btn" href="./20회 종교와 신앙의 차이와 신약성경 내의 복음.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>21회 영혼과 부활</div>
+      <div class="actions">
+        <a class="btn" href="./21회 영혼과 부활.pdf">열기</a>
+        <a class="btn" href="./21회 영혼과 부활.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>22회 윤회의 원죄성과 대속설</div>
+      <div class="actions">
+        <a class="btn" href="./22회 윤회의 원죄성과 대속설.pdf">열기</a>
+        <a class="btn" href="./22회 윤회의 원죄성과 대속설.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>23회 사후세계</div>
+      <div class="actions">
+        <a class="btn" href="./23회 사후세계.pdf">열기</a>
+        <a class="btn" href="./23회 사후세계.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>24회 천당 vs. 천국</div>
+      <div class="actions">
+        <a class="btn" href="./24회 천당 vs. 천국.pdf">열기</a>
+        <a class="btn" href="./24회 천당 vs. 천국.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>25회 지옥 그리고 연옥 외</div>
+      <div class="actions">
+        <a class="btn" href="./25회 지옥 그리고 연옥 외.pdf">열기</a>
+        <a class="btn" href="./25회 지옥 그리고 연옥 외.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>26회 여호와와 하나님</div>
+      <div class="actions">
+        <a class="btn" href="./26회 여호와와 하나님.pdf">열기</a>
+        <a class="btn" href="./26회 여호와와 하나님.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>27회 종교의 본질</div>
+      <div class="actions">
+        <a class="btn" href="./27회 종교의 본질.pdf">열기</a>
+        <a class="btn" href="./27회 종교의 본질.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>28회 사악의 악마</div>
+      <div class="actions">
+        <a class="btn" href="./28회 사악의 악마.pdf">열기</a>
+        <a class="btn" href="./28회 사악의 악마.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>29회 존재의 본질</div>
+      <div class="actions">
+        <a class="btn" href="./29회 존재의 본질.pdf">열기</a>
+        <a class="btn" href="./29회 존재의 본질.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>30회 존재의 본질 사례</div>
+      <div class="actions">
+        <a class="btn" href="./30회 존재의 본질 사례.pdf">열기</a>
+        <a class="btn" href="./30회 존재의 본질 사례.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>31회 영(靈)의 의미</div>
+      <div class="actions">
+        <a class="btn" href="./31회 영(靈)의 의미.pdf">열기</a>
+        <a class="btn" href="./31회 영(靈)의 의미.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>32회 모든 존재는 하나님</div>
+      <div class="actions">
+        <a class="btn" href="./32회 모든 존재는 하나님.pdf">열기</a>
+        <a class="btn" href="./32회 모든 존재는 하나님.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>33회 우리 모두가 하나님</div>
+      <div class="actions">
+        <a class="btn" href="./33회 우리 모두가 하나님.pdf">열기</a>
+        <a class="btn" href="./33회 우리 모두가 하나님.pdf" download>다운로드</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="name"><span class="badge">PDF</span>34회 하늘뜻 말·말</div>
+      <div class="actions">
+        <a class="btn" href="./34회 하늘뜻 말·말.pdf">열기</a>
+        <a class="btn" href="./34회 하늘뜻 말·말.pdf" download>다운로드</a>
+      </div>
+    </div>
+
   </div>
+
+  <footer class="meta" style="margin-top:24px">
+    ※ 파일명이 한글/공백을 포함해도 GitHub Pages에서 정상 동작합니다. 혹시 일부 브라우저에서 공백 문제로 열리지 않으면
+    파일명을 하이픈(-) 규칙으로 변경해 드릴 수 있습니다.
+  </footer>
+</div>
 </body>
 </html>
