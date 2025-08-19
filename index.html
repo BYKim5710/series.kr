@@ -136,30 +136,28 @@
   </div>
 
   <!-- ✅ 안전 버전: 한글/공백 파일명 자동 인코딩 + 보조 뷰어 링크 -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll("a.pdf-link").forEach(a => {
-        const file = (a.getAttribute("data-file") || "").trim();
-        if(!file) return;
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("a.pdf-link").forEach(a => {
+      const file = (a.getAttribute("data-file") || "").trim();
+      if(!file) return;
 
-        // 한글/공백/특수문자 안전 처리
-        const encoded = encodeURI(file);
-        a.href = encoded;
-        a.target = "_blank";
-        a.rel = "noopener";
+      // 한글/공백/특수문자 안전 처리
+      const encoded = encodeURI(file);
+      a.href = encoded;
+      a.target = "_blank";
+      a.rel = "noopener";
 
-        // 모바일/일부 브라우저에서 바로보기 실패 시 보조 뷰어 링크도 추가
-        const helper = document.createElement("a");
-        helper.textContent = " 📖(열기 안될 때)";
-        helper.className = a.className;
-        helper.style.marginLeft = "6px";
-        helper.target = "_blank";
-        helper.rel = "noopener";
-        const abs = new URL(encoded, location.href).href;
-        helper.href = "https://docs.google.com/gview?embedded=1&url=" + encodeURIComponent(abs);
-        a.parentElement.appendChild(helper);
-      });
+      // 모바일/일부 브라우저에서 바로보기 실패 시 보조 뷰어 링크도 추가
+      const helper = document.createElement("a");
+      helper.textContent = " 📖(열기 안될 때)";
+      helper.className = a.className;
+      helper.style.marginLeft = "6px";
+      helper.target = "_blank";
+      helper.rel = "noopener";
+      const abs = new URL(encoded, location.href).href;
+      helper.href = "https://docs.google.com/gview?embedded=1&url=" + encodeURIComponent(abs);
+      a.parentElement.appendChild(helper);
     });
-  </script>
-</body>
-</html>
+  });
+</script>
