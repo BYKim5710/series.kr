@@ -146,18 +146,16 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('ts').textContent =
     ts.getFullYear() + '-' + String(ts.getMonth()+1).padStart(2,'0') + '-' + String(ts.getDate()).padStart(2,'0');
 
-  // 현재 경로가 /series.kr/index.html 또는 /series.kr/ 로 접근되든 모두 루트 기준으로 링크 생성
-  const base = location.pathname.replace(/index\.html$/i,'').replace(/\/$/,'') + '/';
-  // PDF 링크 보정
+  // 절대 경로 보정: https://bykim5710.github.io/ + /series.kr/
+  const path = location.pathname.replace(/index\.html$/i,'').replace(/\/$/,'') + '/';
+  const base = location.origin + path;
+
   document.querySelectorAll('a.pdf').forEach(a=>{
     const f = (a.getAttribute('data-file')||'').trim();
     if(!f) return;
     const encoded = encodeURIComponent(f).replace(/%2F/g,'/');
-    a.href = base + encoded;
+    a.href = base + encoded;        // 예: https://bykim5710.github.io/series.kr/00.pdf
     a.target = '_blank';
     a.rel = 'noopener';
   });
 });
-</script>
-</body>
-</html>
