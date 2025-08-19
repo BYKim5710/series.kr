@@ -2,205 +2,159 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>종교혁명 — 동영상 & 연재물</title>
-  <meta name="description" content="한국/영문 동영상과 『하나님과의 대화』 연재물(PDF 36편), English PDF Series 링크 모음." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>종교혁명 — 동영상 & 연재물(한국어)</title>
+  <meta name="description" content="한국/영문 동영상과 『하나님과의 대화』 연재물(PDF, 총 36편)을 한 페이지에서 확인하세요." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+
   <style>
     :root{
       --bg:#0b0b10;--panel:#12131a;--muted:#9aa3b2;--text:#eaf0ff;
-      --accent:#4ea1ff;--border:#1f2230;--shadow:0 10px 26px rgba(0,0,0,.35)
+      --accent:#4ea1ff;--accent2:#8bd1ff;--card:#1f2430;
+      --radius:16px;--shadow:0 10px 30px rgba(0,0,0,.35);
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Apple SD Gothic Neo,Malgun Gothic,Noto Sans KR,Helvetica,Arial,sans-serif;line-height:1.65}
-    .wrap{max-width:1100px;margin:0 auto;padding:26px 16px 80px}
-    header{background:linear-gradient(180deg, rgba(78,161,255,.12), transparent);
-      border:1px solid var(--border);border-radius:18px;padding:20px 18px;box-shadow:var(--shadow)}
-    h1{margin:0 0 6px;font-size:26px}
-    p.sub{margin:6px 0 8px;color:var(--muted)}
-    section{background:rgba(18,19,26,.55);border:1px solid var(--border);
-      border-radius:16px;box-shadow:var(--shadow);padding:16px 16px;margin-top:18px}
-    h2{margin:0 0 8px;font-size:20px}
-    .grid{list-style:none;padding:0;margin:10px 0 0;display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-    .card{background:#15161d;border:1px solid var(--border);border-radius:14px;
-      padding:12px 12px;display:flex;flex-direction:column;gap:8px;min-height:96px}
-    .title{font-weight:700}
-    .link{display:inline-flex;gap:8px;align-items:center;text-decoration:none;color:#a7c8ff}
-    .link:hover{text-decoration:underline;opacity:.95}
-    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:12px;
-      border:1px solid var(--border);background:var(--panel);color:var(--text);text-decoration:none;font-weight:600}
-    .muted{color:var(--muted);font-size:12px;margin-top:6px}
-    footer{margin-top:24px;color:var(--muted);font-size:12px;text-align:center}
+    html,body{margin:0;height:100%}
+    body{
+      font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,Helvetica,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+      background: radial-gradient(1200px 900px at 10% -10%, #1a1e3 0, #0b0b10 60%);
+      color:var(--text); line-height:1.6;
+    }
+    a{color:var(--text); text-decoration:none}
+    a.link{color:var(--accent)}
+    a.link:hover{color:#fff; text-decoration:underline}
+    .wrap{max-width:1100px;margin:30px auto; padding:0 16px}
+    header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-bottom:18px}
+    h1{font-size:clamp(22px,4vw,30px); margin:0}
+    .btns{display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#011018; font-weight:700;
+      padding:10px 14px;border:none;border-radius:12px; box-shadow:var(--shadow)
+    }
+    .btn.secondary{
+      background:#17202d; color:#d8e6ff; box-shadow:inset 0 0 0 1px #223045;
+    }
+    section{margin:26px 0}
+    section h2{font-size:20px;margin:0 0 10px}
+    .grid{
+      display:grid; gap:12px;
+      grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+      margin-top:10px
+    }
+    .card{
+      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      padding:16px; min-height:82px; display:flex; flex-direction:column; justify-content:center;
+    }
+    .title{font-weight:700; margin-bottom:6px}
+    footer{margin:28px 0 10px; color:var(--muted); font-size:13px}
+
+    /* 작은 안내 뱃지 */
+    .note{font-size:13px;color:var(--muted); margin:6px 0 0}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <h1>종교혁명 — 동영상 & 연재물</h1>
-      <p class="sub">한국/영문 동영상, 『하나님과의 대화』 연재물(PDF 36편)을 한 페이지에서 확인하세요.</p>
-      <div class="btnrow">
-        <a class="btn" href="#videos-ko">▶ 한국 동영상</a>
-        <a class="btn" href="#videos-en">🎬 English Videos</a>
-        <a class="btn" href="#archive">📚 연재물 36편 (PDF)</a>
-        <a class="btn" href="#channel">📺 전체 유튜브 채널</a>
+      <h1>종교혁명 — 동영상 &amp; 연재물(한국어)</h1>
+      <div class="btns">
+        <a class="btn secondary" href="../series/" title="영문판으로 이동">🌐 영문 시리즈로</a>
+        <a class="btn secondary" href="https://www.youtube.com/channel/UCxd8XnqtIjPmbQLNB1cG0xQ" target="_blank" rel="noopener">📺 전체 유튜브 채널</a>
       </div>
     </header>
 
     <!-- 한국 동영상 -->
-    <section id="videos-ko">
-      <h2>📺 한국 동영상 (업데이트 중)</h2>
-      <ul class="grid" style="margin-top:10px">
+    <section id="videos-kr">
+      <h2>🇰🇷 한국 동영상 (업데이트 중)</h2>
+      <ul class="grid" style="margin-top:10px; list-style:none; padding:0">
         <li class="card"><div class="title">제1회: 저자 책 및 신통신통회 소개</div><a class="link" href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">▶ YouTube</a></li>
         <li class="card"><div class="title">제2회: 왜 종교혁명이 필요한가? — 기독교민주주의</div><a class="link" href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener">▶ YouTube</a></li>
         <li class="card"><div class="title">제3회: 왜 종교혁명인가? — 종교개혁의 미완성</div><a class="link" href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="card"><div class="title">제4회: 왜 종교혁명인가? — 기본으로 돌아가자</div><a class="link" href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">▶ YouTube</a></li>
+        <li class="card"><div class="title">제4회: 왜 종교혁명인가 — 기본으로 돌아가자</div><a class="link" href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">▶ YouTube</a></li>
         <li class="card"><div class="title">제5회: 기독교계에 보낸 편지</div><a class="link" href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener">▶ YouTube</a></li>
         <li class="card"><div class="title">제6회: 종교혁명선언서</div><a class="link" href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener">▶ YouTube</a></li>
         <li class="card"><div class="title">제7회: 무유와 전이</div><a class="link" href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">▶ YouTube</a></li>
-        <li class="card"><div class="title">제8회: 공무영 — 무유와 쿼크</div><a class="link" href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">▶ YouTube</a></li>
+        <li class="card"><div class="title">제8회: 공·무·영 — 무유와 쿼크</div><a class="link" href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">▶ YouTube</a></li>
         <li class="card"><div class="title">제9회: 사후세계 — 전이계</div><a class="link" href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">▶ YouTube</a></li>
         <li class="card"><div class="title">제10회: 하나임(Oneness)</div><a class="link" href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener">▶ YouTube</a></li>
       </ul>
     </section>
 
-    <!-- English 동영상 -->
-    <section id="videos-en">
-      <h2>🎬 English Video Series</h2>
-      <ul class="grid" style="margin-top:10px">
-        <li class="card"><div class="title">Ep. 1 — Introduction of BY Kim and NCG</div><a class="link" href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
-        <li class="card"><div class="title">Ep. 2 — Why do we need Religious Revolution — Christian Democracy</div><a class="link" href="https://youtu.be/IniMUGC3T9Q" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
-        <li class="card"><div class="title">Ep. 3 — Why a Religious Revolution beyond the Reformation</div><a class="link" href="https://youtu.be/lWkN4CYJzeY" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
-        <li class="card"><div class="title">Ep. 4 — Why a Religious Revolution — Back to the Basics</div><a class="link" href="https://youtu.be/2o4DQlfseJE" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
-        <li class="card"><div class="title">Ep. 5 — Letters sent to the Christianity World</div><a class="link" href="https://youtu.be/CChiJ5zqBUE" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
-        <li class="card"><div class="title">Ep. 6 — Declaration of Religious Revolution</div><a class="link" href="https://youtu.be/dUE4oor84dI" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
-        <li class="card"><div class="title">Ep. 7 — Nosome and Transmigration</div><a class="link" href="https://youtu.be/RJLy0bdgQoQ" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
-        <li class="card"><div class="title">Ep. 8 — ENZ Nosome and Quark</div><a class="link" href="https://youtu.be/NmZ9FxixN48" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
-        <li class="card"><div class="title">Ep. 9 — Afterlife vs. Transmigration</div><a class="link" href="https://youtu.be/v9fF42xvwWE" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
-        <li class="card"><div class="title">Ep. 10 — Oneness</div><a class="link" href="https://youtu.be/uTzE24vYqco" target="_blank" rel="noopener">▶ Watch on YouTube</a></li>
+    <!-- 한국어 PDF 연재물 -->
+    <section id="archive">
+      <h2>📚 저서 「하나님과의 대화」 연재물 (총 36개 · PDF)</h2>
+      <ul class="grid" style="list-style:none; padding:0">
+        <!-- data-file 에 실제 파일명을 그대로 넣습니다(루트에 있음). 스크립트가 자동 인코딩/링크 생성 -->
+        <li class="card"><div class="title">목차와 프로필</div><a class="link pdf-link" data-file="00.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">저자 소개와 책 소개</div><a class="link pdf-link" data-file="01.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">추천사</div><a class="link pdf-link" data-file="01-1.pdf">📄 PDF 다운로드</a></li>
+
+        <li class="card"><div class="title">대홍수와 출애굽기</div><a class="link pdf-link" data-file="02.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">창조론과 진화론</div><a class="link pdf-link" data-file="03.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">구약성경의 기록 오류-1</div><a class="link pdf-link" data-file="04.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">구약성경의 기록 오류-2</div><a class="link pdf-link" data-file="05.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">구약성경의 윤리적 문제-잔혹성</div><a class="link pdf-link" data-file="06.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">구약성경의 윤리적 문제-문란성</div><a class="link pdf-link" data-file="07.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">구약성경의 역사적 고찰</div><a class="link pdf-link" data-file="08.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">구약성경의 기록 시점</div><a class="link pdf-link" data-file="09.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">구약성경의 효용과 한계</div><a class="link pdf-link" data-file="10.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">구약성경 vs. 신약성경</div><a class="link pdf-link" data-file="11.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">예수의 탄생</div><a class="link pdf-link" data-file="12.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">동정녀 마리아</div><a class="link pdf-link" data-file="13.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">예수의 성매매 진실</div><a class="link pdf-link" data-file="14.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">막달라 마리아</div><a class="link pdf-link" data-file="15.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">성경의 기적</div><a class="link pdf-link" data-file="16.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">예수의 죽음</div><a class="link pdf-link" data-file="17.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">예수의 부활과 승천</div><a class="link pdf-link" data-file="18.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">바울과 베드로</div><a class="link pdf-link" data-file="19.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">복음서 차이와 신약성경 내의 복음</div><a class="link pdf-link" data-file="20.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">영혼과 부활</div><a class="link pdf-link" data-file="21.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">윤회와 원죄설과 대속설</div><a class="link pdf-link" data-file="22.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">사후세계</div><a class="link pdf-link" data-file="23.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">천당 vs. 천국</div><a class="link pdf-link" data-file="24.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">지옥 그리고 연옥 외</div><a class="link pdf-link" data-file="25.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">여호와 vs. 하나님</div><a class="link pdf-link" data-file="26.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">종교의 본질</div><a class="link pdf-link" data-file="27.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">천사와 악마</div><a class="link pdf-link" data-file="28.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">존재의 본질</div><a class="link pdf-link" data-file="29.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">존재의 본질 사례</div><a class="link pdf-link" data-file="30.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">영(零)의 의미</div><a class="link pdf-link" data-file="31.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">모든 존재는 하나임</div><a class="link pdf-link" data-file="32.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">우리 모두가 하나님</div><a class="link pdf-link" data-file="33.pdf">📄 PDF 다운로드</a></li>
+        <li class="card"><div class="title">끝맺는 말</div><a class="link pdf-link" data-file="34.pdf">📄 PDF 다운로드</a></li>
       </ul>
+      <p class="note">※ PDF는 파일명을 그대로 사용하며, 아래 스크립트가 자동으로 안전 인코딩(encodeURI) 처리합니다.</p>
     </section>
 
-<section id="english-pdf">
-  <h2>📚 English PDF Series</h2>
-  <ul class="grid" style="margin-top:10px">
-    <li class="card">
-      <div class="title">01-1. Recommendation to Readers</div>
-      <a class="link pdf-link" data-path="docs/" data-file="01-1. Recommendation to Readers.pdf">📄 Open PDF</a>
-    </li>
-    <li class="card">
-      <div class="title">02. Creationism vs. Evolutionism</div>
-      <a class="link pdf-link" data-path="docs/" data-file="02. Creationism vs. Evolutionism.pdf">📄 Open PDF</a>
-    </li>
-    <li class="card">
-      <div class="title">03. Deluge and Exodus</div>
-      <a class="link pdf-link" data-path="docs/" data-file="03. Deluge and Exodus.pdf">📄 Open PDF</a>
-    </li>
-    <li class="card">
-      <div class="title">04. Errors in Record-1</div>
-      <a class="link pdf-link" data-path="docs/" data-file="04. Errors in Record-1.pdf">📄 Open PDF</a>
-    </li>
-    <li class="card">
-      <div class="title">05. Errors in Record-2</div>
-      <a class="link pdf-link" data-path="docs/" data-file="05. Errors in Record-2.pdf">📄 Open PDF</a>
-    </li>
-    <li class="card">
-      <div class="title">06. Old Testament Ethical Issues — Brutality</div>
-      <a class="link pdf-link" data-path="docs/" data-file="06. Old Testament Ethical Issues — Brutality.pdf">📄 Open PDF</a>
-    </li>
-  </ul>
-  <p class="muted">Tip: Files open in a new tab; some browsers may download instead.</p>
-</section>
-
-<!-- ===== Korean PDF Archive (총 36개) ===== -->
-<section id="archive-kr">
-  <h2>📚 저서 「하나님과의 대화」 연재물 (총 36개 · PDF)</h2>
-  <ul class="grid" style="margin-top:10px">
-
-    <!-- 00 -->
-    <li class="card">
-      <div class="title">00: 목차와 프로필</div>
-      <a class="link pdf-link" data-file="00.pdf">📄 PDF 다운로드</a>
-    </li>
-
-    <!-- 01 / 01-1 -->
-    <li class="card">
-      <div class="title">1회: 저자 소개와 책 소개</div>
-      <a class="link pdf-link" data-file="01.pdf">📄 PDF 다운로드</a>
-    </li>
-    <li class="card">
-      <div class="title">1-1회: 추천사</div>
-      <a class="link pdf-link" data-file="01-1.pdf">📄 PDF 다운로드</a>
-    </li>
-
-    <!-- 02 ~ 10 -->
-    <li class="card"><div class="title">2회: 대홍수와 출애굽기</div><a class="link pdf-link" data-file="02.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">3회: 창조론과 진화론</div><a class="link pdf-link" data-file="03.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">4회: 구약성경의 기록 오류-1</div><a class="link pdf-link" data-file="04.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">5회: 구약성경의 기록 오류-2</div><a class="link pdf-link" data-file="05.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">6회: 구약성경의 윤리적 문제-잔혹성</div><a class="link pdf-link" data-file="06.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">7회: 구약성경의 윤리적 문제-문란성</div><a class="link pdf-link" data-file="07.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">8회: 구약성경의 역사적 고찰</div><a class="link pdf-link" data-file="08.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">9회: 구약성경의 기록 시점</div><a class="link pdf-link" data-file="09.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">10회: 구약성경의 효용과 한계</div><a class="link pdf-link" data-file="10.pdf">📄 PDF 다운로드</a></li>
-
-    <!-- 11 ~ 20 -->
-    <li class="card"><div class="title">11회: 구약성경 vs. 신약성경</div><a class="link pdf-link" data-file="11.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">12회: 예수의 탄생</div><a class="link pdf-link" data-file="12.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">13회: 동정녀 마리아</div><a class="link pdf-link" data-file="13.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">14회: 예수의 성매매 진실</div><a class="link pdf-link" data-file="14.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">15회: 막달라 마리아</div><a class="link pdf-link" data-file="15.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">16회: 성경의 기적</div><a class="link pdf-link" data-file="16.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">17회: 예수의 죽음</div><a class="link pdf-link" data-file="17.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">18회: 예수의 부활과 승천</div><a class="link pdf-link" data-file="18.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">19회: 바울과 베드로</div><a class="link pdf-link" data-file="19.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">20회: 복음서 차이와 신약성경 내의 복음</div><a class="link pdf-link" data-file="20.pdf">📄 PDF 다운로드</a></li>
-
-    <!-- 21 ~ 30 -->
-    <li class="card"><div class="title">21회: 영혼과 부활</div><a class="link pdf-link" data-file="21.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">22회: 윤회와 원죄설과 대속설</div><a class="link pdf-link" data-file="22.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">23회: 사후세계</div><a class="link pdf-link" data-file="23.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">24회: 천당 vs. 천국</div><a class="link pdf-link" data-file="24.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">25회: 지옥 그리고 연옥 외</div><a class="link pdf-link" data-file="25.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">26회: 여호와 vs. 하나님</div><a class="link pdf-link" data-file="26.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">27회: 종교의 본질</div><a class="link pdf-link" data-file="27.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">28회: 천사와 악마</div><a class="link pdf-link" data-file="28.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">29회: 존재의 본질</div><a class="link pdf-link" data-file="29.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">30회: 존재의 본질 사례</div><a class="link pdf-link" data-file="30.pdf">📄 PDF 다운로드</a></li>
-
-    <!-- 31 ~ 34 -->
-    <li class="card"><div class="title">31회: 영(零)의 의미</div><a class="link pdf-link" data-file="31.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">32회: 모든 존재는 하나임</div><a class="link pdf-link" data-file="32.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">33회: 우리 모두가 하나님</div><a class="link pdf-link" data-file="33.pdf">📄 PDF 다운로드</a></li>
-    <li class="card"><div class="title">34회: 끝맺는 말</div><a class="link pdf-link" data-file="34.pdf">📄 PDF 다운로드</a></li>
-
-  </ul>
-</section>
-<!-- ===== /Korean PDF Archive ===== -->
-
-    <!-- 전체 유튜브 채널 -->
-    <section id="channel">
-      <h2>📺 전체 유튜브 채널</h2>
-      <p><a class="link" href="https://www.youtube.com/channel/UCxd8XnqtIjPmbQLNB1cG0xQ" target="_blank" rel="noopener">@김병윤-c2s 채널 바로가기</a></p>
-    </section>
-
-    <footer>Last updated: 2025-08-19</footer>
+    <footer>Last updated: <span id="ts"></span></footer>
   </div>
 
-<!-- ✅ PDF 링크 자동 생성: /series/ 고정 + (옵션) data-path 폴더 + 파일명 인코딩 -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const base = "/series/"; // 이 사이트는 /series/에서 호스팅
+  <!-- 안전 버전: 한글/공백/특수문자 자동 인코딩 + 상대 경로 보정 -->
+  <script>
+    // 업데이트 타임스탬프
+    (function(){
+      const d = new Date();
+      const pad = n => String(n).padStart(2,'0');
+      document.getElementById('ts').textContent =
+        d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate());
+    })();
 
-    document.querySelectorAll("a.pdf-link").forEach(a => {
-      const sub = (a.getAttribute("data-path") || "");         // 예: "docs/" 또는 ""
-      const file = (a.getAttribute("data-file")  || "").trim(); // 실제 파일명
-      if (!file) return;
+    document.addEventListener('DOMContentLoaded', () => {
+      // 현재 경로의 index.html 제거 → 상대 경로 안전 처리
+      const base = location.pathname.replace(/index\.html$/i,'').replace(/\/+$/,'') + '/';
 
-      a.href   = `${base}${sub}${encodeURIComponent(file)}`;
-      a.target = "_blank";
-      a.rel    = "noopener";
+      document.querySelectorAll('a.pdf-link').forEach(a => {
+        const file = (a.getAttribute('data-file')||'').trim();
+        if(!file) return;
+
+        // 파일명 전체를 encodeURI로 안전 인코딩
+        const encoded = encodeURI(file);
+        a.href = encoded;                // 루트(같은 폴더)에 있으므로 파일명만
+        a.target = '_blank';
+        a.rel = 'noopener';
+      });
     });
-  });
-</script>
+  </script>
+</body>
+</html>
