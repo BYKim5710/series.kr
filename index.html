@@ -135,27 +135,32 @@
     <footer>Last updated: 2025-08-19</footer>
   </div>
 
-  <!-- ✅ 안전 버전: 한글/공백 파일명 자동 인코딩 + 보조 뷰어 링크 -->
+ <!-- ✅ 안전 버전(강화): 한글/공백/특수문자 완전 인코딩 + 경로 보정 + 보조 뷰어 -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    // /series/index.html → /series/ 로 보정 (index.html로 접근해도 안전)
+    const base = location.pathname.replace(/index\.html?$/i, '');
+
     document.querySelectorAll("a.pdf-link").forEach(a => {
       const file = (a.getAttribute("data-file") || "").trim();
-      if(!file) return;
+      if (!file) return;
 
-      // 한글/공백/특수문자 안전 처리
-      const encoded = encodeURI(file);
-      a.href = encoded;
+      // 파일명 전체를 컴포넌트 단위로 강력 인코딩 (공백/괄호/한글/특수문자 모두 안전)
+      const encoded = encodeURIComponent(file);
+
+      // 상대경로로 최종 href 지정 (/series/ + 인코딩된 파일명)
+      a.href = `${base}${encoded}`;
       a.target = "_blank";
       a.rel = "noopener";
 
-      // 모바일/일부 브라우저에서 바로보기 실패 시 보조 뷰어 링크도 추가
+      // 보조 뷰어 (모바일/일부 브라우저에서 내장 PDF 뷰어 실패 시)
       const helper = document.createElement("a");
       helper.textContent = " 📖(열기 안될 때)";
       helper.className = a.className;
       helper.style.marginLeft = "6px";
       helper.target = "_blank";
       helper.rel = "noopener";
-      const abs = new URL(encoded, location.href).href;
+      const abs = new URL(a.href, location.origin).href; // 절대 URL
       helper.href = "https://docs.google.com/gview?embedded=1&url=" + encodeURIComponent(abs);
       a.parentElement.appendChild(helper);
     });
