@@ -82,7 +82,38 @@
       </ul>
     </section>
 
-    <!-- 연재물 36편 PDF (한글 파일명 + 안전 스크립트) -->
+<section id="english-pdf">
+  <h2>📚 English PDF Series</h2>
+  <ul class="grid" style="margin-top:10px">
+    <li class="card">
+      <div class="title">01-1. Recommendation to Readers</div>
+      <a class="link pdf-link" data-path="docs/" data-file="01-1. Recommendation to Readers.pdf">📄 Open PDF</a>
+    </li>
+    <li class="card">
+      <div class="title">02. Creationism vs. Evolutionism</div>
+      <a class="link pdf-link" data-path="docs/" data-file="02. Creationism vs. Evolutionism.pdf">📄 Open PDF</a>
+    </li>
+    <li class="card">
+      <div class="title">03. Deluge and Exodus</div>
+      <a class="link pdf-link" data-path="docs/" data-file="03. Deluge and Exodus.pdf">📄 Open PDF</a>
+    </li>
+    <li class="card">
+      <div class="title">04. Errors in Record-1</div>
+      <a class="link pdf-link" data-path="docs/" data-file="04. Errors in Record-1.pdf">📄 Open PDF</a>
+    </li>
+    <li class="card">
+      <div class="title">05. Errors in Record-2</div>
+      <a class="link pdf-link" data-path="docs/" data-file="05. Errors in Record-2.pdf">📄 Open PDF</a>
+    </li>
+    <li class="card">
+      <div class="title">06. Old Testament Ethical Issues — Brutality</div>
+      <a class="link pdf-link" data-path="docs/" data-file="06. Old Testament Ethical Issues — Brutality.pdf">📄 Open PDF</a>
+    </li>
+  </ul>
+  <p class="muted">Tip: Files open in a new tab; some browsers may download instead.</p>
+</section>
+
+   <!-- 연재물 36편 PDF (한글 파일명 + 안전 스크립트) -->
     <section id="archive">
       <h2>📚 저서 「하나님과의 대화」 연재물 (총 36개 · PDF)</h2>
       <ul class="grid" style="margin-top:10px">
@@ -135,20 +166,19 @@
     <footer>Last updated: 2025-08-19</footer>
   </div>
 
- <!-- ✅ 안전 버전(최종): 한글/공백/특수문자 완전 인코딩 -->
+<!-- ✅ PDF 링크 자동 생성: /series/ 고정 + (옵션) data-path 폴더 + 파일명 인코딩 -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // /series/index.html → /series/ 로 보정
-    const base = location.pathname.replace(/index\.html?$/i, '');
+    const base = "/series/"; // 이 사이트는 /series/에서 호스팅
 
     document.querySelectorAll("a.pdf-link").forEach(a => {
-      const file = (a.getAttribute("data-file") || "").trim();
+      const sub = (a.getAttribute("data-path") || "");         // 예: "docs/" 또는 ""
+      const file = (a.getAttribute("data-file")  || "").trim(); // 실제 파일명
       if (!file) return;
 
-      const encoded = encodeURIComponent(file);
-      a.href = `${base}${encoded}`;
+      a.href   = `${base}${sub}${encodeURIComponent(file)}`;
       a.target = "_blank";
-      a.rel = "noopener";
+      a.rel    = "noopener";
     });
   });
 </script>
