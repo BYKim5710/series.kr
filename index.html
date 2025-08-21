@@ -199,3 +199,19 @@
 </script>
 </body>
 </html>
+
+<script>
+/* 모든 .pdf 링크를 Google Docs Viewer로 열도록 변환 */
+(function () {
+  // pdf 링크만 선택 (한국/영문 PDF 섹션 모두 자동 처리)
+  document.querySelectorAll('a[href$=".pdf"]').forEach(function (a) {
+    // 상대경로를 절대경로로 변환
+    var absolute = new URL(a.getAttribute('href'), location.href).href;
+    // gview URL로 치환
+    var gview = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(absolute);
+    a.setAttribute('href', gview);
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+  });
+})();
+</script>
