@@ -40,24 +40,35 @@
 
 <body>
 <div class="wrap">
-  <header>
-    <h1>유튜브 동영상과 “하나님과의 대화 (Conversation with Oneness God)” 연재물</h1>
-    <p class="lead">아래 탭을 눌러 보실 내용을 선택하세요. 선택된 항목만 표시됩니다.</p>
+<header>
+  <h1>유튜브 동영상과 “하나님과의 대화 (Conversation with Oneness God)” 연재물</h1>
+  <p class="lead">아래 탭을 눌러 보실 내용을 선택하세요. 선택된 항목만 표시됩니다.</p>
 
-    <!-- Tabs -->
-    <div class="tabs">
-      <button class="tab-btn" onclick="openTab('videos-kr', this)">
-        <img class="flag" src="https://twemoji.maxcdn.com/v/latest/svg/1f1f0-1f1f7.svg" alt="KR" />
-        한국어 영상
-      </button>
-      <button class="tab-btn" onclick="openTab('videos-en', this)">
-        <img class="flag" src="https://twemoji.maxcdn.com/v/latest/svg/1f1fa-1f1f8.svg" alt="US" />
-        English Videos
-      </button>
-      <button class="tab-btn" onclick="openTab('channel', this)">📺 유튜브 전체 채널(@김병윤-c2s)</button>
-      <button class="tab-btn" onclick="openTab('kr-pdf', this)">📄 하나님과의 대화 연재물(PDF)</button>
-    </div>
-  </header>
+  <!-- Tabs -->
+  <div class="tabs">
+    <!-- 한국어 영상 -->
+    <button class="tab-btn" onclick="openTab('videos-kr', this)">
+      <img class="flag" src="https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg" alt="대한민국 태극기" />
+      한국어 영상
+    </button>
+
+    <!-- English Videos -->
+    <button class="tab-btn" onclick="openTab('videos-en', this)">
+      <img class="flag" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="미국 성조기" />
+      English Videos
+    </button>
+
+    <!-- 전체 채널 -->
+    <button class="tab-btn" onclick="openTab('channel', this)">
+      📺 유튜브 전체 채널(@김병윤-c2s)
+    </button>
+
+    <!-- PDF 연재물 -->
+    <button class="tab-btn" onclick="openTab('kr-pdf', this)">
+      📄 하나님과의 대화 연재물(PDF)
+    </button>
+  </div>
+</header>
 
   <!-- 한국어 영상 -->
   <section id="videos-kr" class="section">
