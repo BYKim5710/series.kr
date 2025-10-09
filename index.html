@@ -19,6 +19,34 @@
   
   
 <style>
+<style>
+  /* 테이블의 글자가 세로로 깨지는 현상 방지 */
+table {
+  width: 100%;
+  table-layout: fixed;
+  word-break: keep-all;  /* 한글 단어 단위로 줄바꿈 */
+  white-space: normal;   /* 강제 줄바꿈 방지 */
+}
+
+/* 셀 내부 여백 확보 */
+td, th {
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 15px;
+  }
+  td, th {
+    display: table-cell;  /* block으로 바뀌지 않도록 유지 */
+    word-break: keep-all;
+  }
+}
+</style>
+  
   :root{
     --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2; --link:#78b7ff; --border:#27305e;
   }
