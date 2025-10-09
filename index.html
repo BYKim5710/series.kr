@@ -48,6 +48,27 @@
   .item a{color:var(--link);text-decoration:none}
   .item a:hover{text-decoration:underline}
   footer{color:var(--muted);font-size:12px;margin:24px 0 10px;text-align:right} 
+/* ===== KakaoTalk / Mobile view fix ===== */
+@media (max-width: 768px) {
+  table {
+    table-layout: auto !important;
+    width: 100% !important;
+  }
+  th, td {
+    white-space: normal !important;
+    word-break: keep-all !important;
+    overflow-wrap: anywhere !important;
+    vertical-align: top !important;
+    line-height: 1.6 !important;
+  }
+  .col-set, .col-yt, [class*="col-"] {
+    width: auto !important;
+  }
+  th:nth-child(1), td:nth-child(1) { width: 25% !important; } /* 세트 */
+  th:nth-child(2), td:nth-child(2) { width: 55% !important; } /* 제목 */
+  th:nth-child(3), td:nth-child(3) { width: 20% !important; } /* 링크 */
+}
+/* ===== /KakaoTalk / Mobile view fix ===== */
 </style>
 </head>
 
