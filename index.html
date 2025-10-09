@@ -18,32 +18,45 @@
 <meta name="twitter:image" content="https://bykim5710.github.io/series.kr/ep.01-koor.png" />
   
   
-<style>
-  /* 테이블의 글자가 세로로 깨지는 현상 방지 */
+  <style>
+
+/* ===== 모바일(카카오톡 인앱) 한글 세로깨짐 방지 ===== */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 table {
   width: 100%;
   table-layout: fixed;
-  word-break: keep-all;  /* 한글 단어 단위로 줄바꿈 */
-  white-space: normal;   /* 강제 줄바꿈 방지 */
 }
 
-/* 셀 내부 여백 확보 */
-td, th {
-  padding: 8px 10px;
-  text-align: left;
-  vertical-align: top;
+td, th, p, li, span, div {
+  white-space: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: anywhere;
+  line-break: auto;
+  -webkit-line-break: auto;
 }
 
-/* 모바일 대응 */
-@media screen and (max-width: 600px) {
-  table {
-    font-size: 15px;
-  }
-  td, th {
-    display: table-cell;  /* block으로 바뀌지 않도록 유지 */
-    word-break: keep-all;
-  }
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  td, th { vertical-align: top; padding: 8px 10px; }
 }
+
+/* ===== 색상 테마 정의 ===== */
+:root {
+  --bg: #0b0b10;
+  --panel: #141724;
+  --text: #eef3ff;
+  --muted: #9aa3b2;
+  --link: #78b7ff;
+  --border: #27305e;
+}
+
+/* ===== 공통 초기화 ===== */
+* { box-sizing: border-box; }
+
   
   :root{
     --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2; --link:#78b7ff; --border:#27305e;
