@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>유튜브 동영상과 "하나님과의 대화 (Conversation with Oneness God)" 연재물</title>
+<!-- Open Graph (Facebook/카카오) -->
+<meta property="og:url" content="https://bykim5710.github.io/series.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="유튜브 동영상과 “하나님과의 대화” 연재물">
+<meta property="og:description" content="연재물 안내와 한국어/영문 영상 링크 모음">
+<meta property="og:image" content="https://bykim5710.github.io/series.kr/ep.16-koor.png?v=20251003">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
-  <title>유튜브 동영상과 “하나님과의 대화 (Conversation with Oneness God)” 연재물</title>
-
-  <!-- Open Graph (Facebook/카카오) -->
-  <meta property="og:url" content="https://bykim5710.github.io/series.kr/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="유튜브 동영상과 “하나님과의 대화” 연재물">
-  <meta property="og:description" content="한국어·영문 영상과 PDF 링크 모음">
-  <meta property="og:image" content="https://bykim5710.github.io/series.kr/ep.01-koor.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://bykim5710.github.io/series.kr/ep.01-koor.png">
-
-  <style>
-  /* --- 기본 컬러 테마 --- */
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://bykim5710.github.io/series.kr/ep.16-koor.png?v=20251003" />
+  
+  
+<style>
   :root{
-    --bg:#0b0b10; --panel:#141724; --text:#eef3ff;
-    --muted:#9aa3b2; --link:#78b7ff; --border:#27305e;
+    --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2; --link:#78b7ff; --border:#27305e;
   }
   *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--bg); color:var(--text);
-    font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,Helvetica,Arial,sans-serif;
-    line-height:1.6;
-  }
+  body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Malgun Gothic, Helvetica, Arial, sans-serif;line-height:1.6}
   .wrap{max-width:980px;margin:28px auto;padding:0 16px}
   header{margin:0 0 18px}
   h1{font-size:clamp(22px,3.8vw,30px);margin:0 0 10px}
   .lead{color:var(--muted);margin:8px 0 14px}
-
-  /* --- 탭 버튼(간단형) --- */
   .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
   .tab-btn{
-    display:inline-flex;align-items:center;gap:8px;
-    padding:10px 14px;border-radius:12px;
-    background:#1a1f34;border:1px solid var(--border);
-    color:#def9ff;text-decoration:none;cursor:pointer;font-weight:700
+    display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;
+    background:#1a1f34;border:1px solid var(--border);color:#dfe9ff;text-decoration:none;cursor:pointer;font-weight:700;
   }
-  .tab-btn:hover{outline:1px solid #39528e}
+  .tab-btn.active,.tab-btn:hover{outline:1px solid #39528e}
   .flag{width:22px;height:16px;display:inline-block;vertical-align:middle}
-  </style>
+
+  section.section{display:none}
+  section.section.active{display:block}
+
+  .section{background:var(--panel);border:1px solid #212744;border-radius:10px;padding:14px;margin:16px 0}
+  .title-left{font-weight:700;margin-bottom:8px}
+  ul.list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media (max-width:760px){ ul.list{grid-template-columns:1fr} }
+  li.item{background:#0f1328;border:1px solid #1e274a;border-radius:10px;padding:12px}
+  .item .title{font-weight:700;margin-bottom:6px;display:block}
+  .item a{color:var(--link);text-decoration:none}
+  .item a:hover{text-decoration:underline}
+  footer{color:var(--muted);font-size:12px;margin:24px 0 10px;text-align:right} 
+</style>
 </head>
 
 <body>
 <div class="wrap">
-
 <header>
   <h1>유튜브 동영상과 “하나님과의 대화 (Conversation with Oneness God)” 연재물</h1>
-  <p class="lead">아래 탭을 눌러 보실 내용을 선택하세요.</p>
+  <p class="lead">아래 탭을 눌러 보실 내용을 선택하세요. 선택된 항목만 표시됩니다.</p>
 
-  <!-- Tabs (간단 4개) -->
+  <!-- Tabs -->
   <div class="tabs">
-    <!-- 한국어 영상 -->
-    <button class="tab-btn" onclick="openTab && openTab('videos-kr', this)">
-      <img class="flag" src="koreanflag.jpg" alt="대한민국 태극기" />
-      한국어 영상
-    </button>
-
+  <!-- 한국어 영상 -->
+<button class="tab-btn" onclick="openTab('videos-kr', this)">
+  <img class="flag" src="koreanflag.jpg" alt="대한민국 태극기" />
+  한국어 영상
+</button>
+  
     <!-- English Videos -->
-    <button class="tab-btn" onclick="openTab && openTab('videos-en', this)">
-      <img class="flag" src="americanflag.jpg" alt="미국 성조기" />
-      English Videos
-    </button>
+    <button class="tab-btn" onclick="openTab('videos-en', this)">
+  <img class="flag" src="americanflag.jpg" alt="미국 성조기" />
+  English Videos
+</button>
 
     <!-- 전체 채널 -->
-    <button class="tab-btn" onclick="openTab && openTab('channel', this)">
+    <button class="tab-btn" onclick="openTab('channel', this)">
       📺 유튜브 전체 채널(@BYIM-c2s)
     </button>
 
     <!-- PDF 연재물 -->
-    <button class="tab-btn" onclick="openTab && openTab('pdfs', this)">
+    <button class="tab-btn" onclick="openTab('kr-pdf', this)">
       📄 하나님과의 대화 연재물(PDF)
     </button>
   </div>
 </header>
+
 
   <!-- 한국어 영상 -->
   <section id="videos-kr" class="section"> 
