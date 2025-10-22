@@ -71,6 +71,20 @@ series.kr/index.html
   th:nth-child(2), td:nth-child(2) { width: 55% !important; } /* 제목 */
   th:nth-child(3), td:nth-child(3) { width: 20% !important; } /* 링크 */
 }
+.fab-subscribe {
+  position: fixed; right: 14px; bottom: 16px;
+  display: none; /* 기본은 PC에서 숨김 */
+  padding: 12px 14px; border-radius: 999px;
+  background:#1b3fa7; color:#fff; text-decoration:none;
+  border:1px solid #2a75ff; box-shadow:0 6px 18px rgba(0,0,0,.28);
+  z-index: 999;
+  font-size:14px; line-height:1;
+}
+@media (max-width: 560px){
+  .fab-subscribe { display: inline-block; }
+}
+모바일에서는 항상 오른쪽 하단에
+  
 /* ===== /KakaoTalk / Mobile view fix ===== */
 </style>
 </head>
@@ -100,14 +114,7 @@ series.kr/index.html
     <!-- PDF 연재물 -->
     <button class="tab-btn" onclick="openTab('kr-pdf', this)"> 📄 하나님과의 대화 연재물(PDF)
     </button>
-
-   <!-- 구독/공유 안내 버튼 -->
-<a class="tab-btn"
-   href="https://bykim5710.github.io/series.kr/subscribe.html"
-   target="_blank"
-   rel="noopener">
-  📺 구독/공유 안내
-</a>
+    
 </header>
 
 
