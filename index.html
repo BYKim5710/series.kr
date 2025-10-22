@@ -71,20 +71,12 @@ series.kr/index.html
   th:nth-child(2), td:nth-child(2) { width: 55% !important; } /* 제목 */
   th:nth-child(3), td:nth-child(3) { width: 20% !important; } /* 링크 */
 }
-.fab-subscribe {
-  position: fixed; right: 14px; bottom: 16px;
-  display: none; /* 기본은 PC에서 숨김 */
-  padding: 12px 14px; border-radius: 999px;
-  background:#1b3fa7; color:#fff; text-decoration:none;
-  border:1px solid #2a75ff; box-shadow:0 6px 18px rgba(0,0,0,.28);
-  z-index: 999;
-  font-size:14px; line-height:1;
-}
-@media (max-width: 560px){
-  .fab-subscribe { display: inline-block; }
-}
-모바일에서는 항상 오른쪽 하단에
-  
+ 모바일에서는 항상 오른쪽 하단에
+ .footer-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+} 
 /* ===== /KakaoTalk / Mobile view fix ===== */
 </style>
 </head>
@@ -178,11 +170,14 @@ series.kr/index.html
 <div style="text-align:center; margin:30px 0;">
   <a href="/NCG_Series_Guide/guide.html?v=3"
      class="btn"
-     style="background-color:#2b6cb0; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:bold;"
+     style="background-color:#26b6cb; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:bold;"
      target="_blank" rel="noopener">
-    📘 시리즈 안내 보기
+     📘 시리즈 안내 보기
   </a>
-</div>
+  <div class="footer-actions">
+    <a class="btn" href="https://bykim5710.github.io/series.kr/subscribe.html"
+       target="_blank" rel="noopener">📺 구독/공유 안내</a>
+  </div>
 
 <!-- 한국어 연재물 PDF -->
 <section id="kr-pdf" class="section">
