@@ -8,286 +8,157 @@ ep: "01"          # 기본 회차(옵션) — site.ep가 있으면 그 값이 �
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  {% assign ep = page.ep | default: site.ep | default: '01' %}
-  {% assign base_og = site.base_og | default: '/assets/og' %}
-  {% assign guide_url = site.guide_ko | default: '/NCG_Series_Guide/guide.html' %}
-  {% assign og_img = base_og | append: '/ep.' | append: ep | append: '-koor.png' %}
-
-  <title>신통신통회 종교혁명 시리즈</title>
-  <meta name="description" content="김병윤 회장의 종교혁명 시리즈: 영상, PDF, 추천사, 가이드" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="신통신통회 종교혁명 시리즈" />
-  <meta property="og:description" content="김병윤 회장의 종교혁명 시리즈: 영상, PDF, 추천사, 가이드" />
-  <meta property="og:image" content="{{ og_img }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="ko_KR" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="신통신통회 종교혁명 시리즈" />
-  <meta name="twitter:description" content="김병윤 회장의 종교혁명 시리즈: 영상, PDF, 추천사, 가이드" />
-  <meta name="twitter:image" content="{{ og_img }}" />
-
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NCG 시리즈</title>
   <style>
-    :root{--bg:#0b0b0c;--fg:#eaecef;--muted:#a7acb5;--accent:#9be864}
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
-    header{padding:20px 16px;border-bottom:1px solid #222}
-    .wrap{max-width:980px;margin:0 auto}
-    .hero{display:grid;gap:16px;align-items:center;padding:32px 16px}
-    .thumb{width:100%;max-width:680px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.35)}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-    a.btn{display:inline-block;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:600}
-    a.primary{background:var(--accent);color:#0b0b0c}
-    a.ghost{border:1px solid #333;color:var(--fg)}
-    .muted{color:var(--muted);font-size:.95rem}
-    @media (min-width: 860px){.hero{grid-template-columns: 1.1fr .9fr}}
+    :root { --fg:#111; --muted:#666; --line:#e9e9e9; --bg:#fff; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", "Noto Sans KR", sans-serif; color:var(--fg); background:var(--bg); margin:0; padding:24px; }
+    .page-title { font-size: 1.5rem; font-weight: 800; margin: .5rem 0 1rem; line-height:1.35; }
+    .badge { display:inline-block; padding:.15rem .55rem; border:1px solid var(--line); border-radius:999px; font-size:.9rem; margin-right:.5rem; background:#fafafa; }
+    .hero { margin: 14px 0; }
+    .hero img { max-width:100%; height:auto; border-radius:12px; border:1px solid var(--line); }
+    .watch { display:inline-block; padding:.65rem 1rem; border-radius:10px; background:#111; color:#fff; text-decoration:none; font-weight:700; }
+    .section { margin: 2rem 0; }
+    .title-left { font-weight: 700; margin-bottom:.6rem; }
+    .list { list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+    .item { display:flex; gap:.75rem; align-items:baseline; padding:.55rem 0; border-bottom:1px solid var(--line); }
+    .item .title { font-weight:600; }
+    .muted { color:var(--muted); }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap" role="navigation" aria-label="Top">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
-        <strong>NCG</strong>
-        <nav style="display:flex;gap:14px;align-items:center">
-          <a class="muted" href="{{ guide_url }}">시리즈 가이드</a>
-          <span class="muted">EP<span aria-hidden="true">.</span><span id="ep-badge">{{ ep }}</span></span>
-        </nav>
-      </div>
-    </div>
-  </header>
 
-  <!-- ===== 통합 히어로 섹션 (동영상 목록 이전) ===== -->
-  <main>
-    <section class="wrap hero" id="intro">
-      <img class="thumb" id="hero-thumb" alt="제 {{ ep }}회 썸네일" src="{{ og_img }}">
-      <div>
-        <h1 style="margin:0 0 8px">제 <span id="h1-ep">{{ ep }}</span>회 — 시리즈 소개</h1>
-        <p class="muted" style="margin:0 0 18px">
-          철학·과학·영성이 만나 종교혁명으로 이어지는 여정을 소개합니다.
-        </p>
-        <div class="actions">
-          <a class="btn primary" id="watch-btn" href="{{ guide_url }}" target="_blank" rel="noopener">영상 보기 →</a>
-          <a class="btn ghost" href="{{ guide_url }}">시리즈 가이드</a>
-        </div>
-        <p class="muted" style="margin-top:10px">
-          URL에 <code>?ep=03</code>처럼 붙이면 페이지 내 표시가 03회로 변경됩니다.
-        </p>
-      </div>
-    </section>
-  </main>
+  <!-- Header -->
+  <h1 class="page-title">
+    <span class="badge" data-ep-label></span>
+    <span id="ep-subtitle"></span>
+  </h1>
+
+  <!-- Hero & Watch -->
+  <div class="hero">
+    <img id="hero-thumb" src="" alt="" />
+  </div>
+  <p>
+    <a id="watch-btn" class="watch" href="#" target="_blank" rel="noopener">▶ 유튜브 보기</a>
+  </p>
+
+  <!-- 한국어 리스트 -->
+  <section id="videos-kr" class="section">
+    <div class="title-left">🎬 한국어 영상</div>
+    <ul class="list" id="video-list-ko"></ul>
+    <p class="muted" style="margin-top:.5rem">* URL이 있는 회차만 표시됩니다.</p>
+  </section>
 
   <script>
+  /* ========= Site variables ========= */
+  const lang     = "{{ lang | default: site.lang | default: 'ko' }}";  // 'ko'|'en'
+  const ep       = "{{ ep   | default: site.ep   | default: '01' }}";  // '01'~'34'
+  const baseOg   = "{{ base_og }}";
+  const guideUrl = "{{ guide_url }}";
+  const EP_MAX   = 34;
+
+  /* ========= Links ========= */
+  const LINKS = {
+    ko: {
+      "01":"https://youtu.be/o9kSstxgDaw",
+      "02":"https://youtu.be/gyI0_88pDuc",
+      "03":"https://youtu.be/ud0K74OvFU8",
+      "04":"https://youtu.be/JKSlRTxvPvM",
+      "05":"https://youtu.be/kTU5ww--3kg",
+      "06":"https://youtu.be/1-Cw70wNDBI",
+      "07":"https://youtu.be/1pMZouSkS48",
+      "08":"https://youtu.be/Dw-fekB8jZ8",
+      "09":"https://youtu.be/8xgmPHN1gJ8",
+      "10":"https://youtu.be/vxIKG7Y5sXQ",
+      "11":"https://youtu.be/xXIteiQq25E",
+      "12":"https://youtu.be/iUudpAtrj9o",
+      "13":"https://youtu.be/XKUveyzEk3Q",
+      "14":"https://youtu.be/G8Hf0J5WE04",
+      "15":"https://youtu.be/ut7s66h2FZs",
+      "16":"https://youtu.be/hPeLXPMlhA4"
+      /* "17"~"34" 이어서 추가 가능 */
+    },
+    en: {
+      "01":"https://youtu.be/xqgxrhM1r24",
+      "02":"https://youtu.be/lmUGC3T9O_",
+      "03":"https://youtu.be/lwKN4CYJzeY",
+      "04":"https://youtu.be/2o4DQ1fseJE",
+      "05":"https://youtu.be/C1h53ZqbUEE",
+      "06":"https://youtu.be/dUE4oor84lI",
+      "07":"https://youtu.be/RJLy0bdg0po",
+      "08":"https://youtu.be/NmI9ZfxiW48",
+      "09":"https://youtu.be/y9FF4zvxw1E",
+      "10":"https://youtu.be/uTzE4YQaxoE",
+      "11":"https://youtu.be/PLypR10K8AA",
+      "12":"https://youtu.be/aZlMaE8paNU",
+      "13":"https://youtu.be/8UMRq0iKDeI",
+      "14":"https://youtu.be/X9Qy6C6bXgE",
+      "15":"https://youtu.be/7GfGKBsqhKQ",
+      "16":"https://youtu.be/WdTU0pqxrFw"
+    }
+  };
+
+  /* ========= Titles (회장님 정리본 – KO) ========= */
+  const TITLES = {
+    ko: {
+      "01":"저자 책 및 신통신통회 소개",
+      "02":"왜 종교혁명이 필요한가 - 기독교민주주의",
+      "03":"왜 종교혁명인가? - 종교개혁의 미완성",
+      "04":"왜 종교혁명인가? - 근원으로 돌아가자",
+      "05":"기독교계에 보낸 편지",
+      "06":"종교혁명 선언서",
+      "07":"무유와 영",
+      "08":"공·무·영 - 무유·유무와 쿼크",
+      "09":"사후세계 대. 전이계",
+      "10":"하나님(Oneness)",
+      "11":"교황과 기독교계에 대한 반박",
+      "12":"여호와 vs 예수의 신성",
+      "13":"십일조",
+      "14":"사후세계",
+      "15":"모세의 출애굽",
+      "16":"다윗과 솔로몬 제국의 허상"
+    }
+  };
+
+  /* ========= Helpers ========= */
+  const pad2 = n => String(n).padStart(2,'0');
+  const labelOf = (lng,n) => (lng==='ko' ? `제${n}` : `Ep. ${n}`);
+
+  /* ========= Header ========= */
   (function(){
-    const qs = new URLSearchParams(location.search);
-    const epQS = qs.get('ep');
-    const ep = epQS || "{{ ep }}";
+    const n = parseInt(ep,10);
+    const epLabel = labelOf(lang, n);
+    document.querySelectorAll('[data-ep-label]').forEach(el => el.textContent = epLabel);
 
-    document.getElementById('ep-badge').textContent = ep;
-    document.getElementById('h1-ep').textContent = ep;
+    const s = document.getElementById('ep-subtitle');
+    if (s) s.textContent = (TITLES.ko && TITLES.ko[ep]) ? TITLES.ko[ep] : '';
 
-    // 섬네일 교체 (koor: 한국어판 / enor: 영어판)
-    var baseOg = "{{ base_og }}";
-    var suffix = "{{ lang }}" === "en" ? "-enor.png" : "-koor.png";
-    var img = baseOg + "/ep." + ep + suffix;
-    document.getElementById('hero-thumb').setAttribute('src', img);
+    const hero = document.getElementById('hero-thumb');
+    if (hero && baseOg) hero.src = `${baseOg}/ep.${ep}-koor.png`;
+    if (hero && !hero.alt) hero.alt = `${epLabel} 썸네일`;
 
-    // ===== 회차별 영상 링크 (01~16) =====
-    var links = {
-      "01": https://youtu.be/o9kSstxgDaw
-      "02": https://youtu.be/gylO_88pDuc
-      "03": https://youtu.be/udOK740VFU8
-      "04": https://youtu.be/JK5RTxrVzPw
-      "05": https://youtu.be/KtU5ww--3kg
-      "06": https://youtu.be/l-Cw7woND8I
-      "07": https://youtu.be/1PmZOU5kS48
-      "08": https://youtu.be/Dw-fekBj8Z8
-      "09": https://youtu.be/8xgmPHNJ1g8
-      "10": https://youtu.be/vxlGrY75sXQ
-      "11": https://youtu.be/xWXteiQq25E
-      "12": https://youtu.be/iUudpAtrj9o
-      "13": https://youtu.be/XKuveyzkE3Q
-      "14": https://youtu.be/GBHfoJ5WEO4
-      "15": https://youtu.be/ut7s66h2FZs
-      "16": https://youtu.be/hPeLXPMlhA4
-    };
-
-    // ===== 연결 로직 =====
-    var a = document.getElementById('watch-btn');
-    a.href = links[ep] || "{{ guide_url }}";
+    const a = document.getElementById('watch-btn');
+    const url = (LINKS[lang] && LINKS[lang][ep]) ? LINKS[lang][ep] : guideUrl;
+    if (a && url) a.href = url;
+    if (a) a.setAttribute('aria-label', `${epLabel} — 유튜브 보기`);
   })();
-</script>
 
-  <!-- ===== 여기부터 기존 동영상/연재물 리스트 유지 ===== -->
-  <!-- <section id="episodes"> ... 기존 내용 ... </section> -->
-
-  <footer class="wrap" style="padding:24px 16px 48px">
-    <p class="muted">© {{ 'now' | date: '%Y' }} NCG — BY Kim</p>
-  </footer>
-</body>
-</html>
-
-
-  <!-- 한국어 영상 -->
-  <section id="videos-kr" class="section"> 
-    <div class="title-left">🇰🇷 한국어 영상</div>
-    <ul class="list">
-      <li class="item"><span class="title">제1회: 저자 책 및 신통신통회 소개</span><a href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">제2회: 왜 종교혁명이 필요한가? — 기독교민주주의</span><a href="https://youtu.be/gylO_88pDuc" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">제3회: 왜 종교혁명인가? — 종교개혁의 미완성</span><a href="https://youtu.be/udOK740VFU8" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">제4회: 왜 종교혁명인가? — 기본으로 돌아가자</span><a href="https://youtu.be/JK5RTxrVzPw" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">제5회: 기독교계에 보낸 편지</span><a href="https://youtu.be/KtU5ww--3kg" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">제6회: 종교혁명선언서</span><a href="https://youtu.be/l-Cw7woND8I" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">제7회: 무유와 전이</span><a href="https://youtu.be/1PmZOU5kS48" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">제8회: 공·무·영 — 무유와 쿼크</span><a href="https://youtu.be/Dw-fekBj8Z8" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">제9회: 사후세계 — 전이계</span><a href="https://youtu.be/8xgmPHNJ1g8" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">제10회: 하나임 (Oneness)</span><a href="https://youtu.be/vxlGrY75sXQ" target="_blank" rel="noopener">▶ YouTube</a></li>
-     <li class="item"><span class="title">제11회: 교황청과 기독교계에 대한 반박</span><a href="https://youtu.be/xWXteiQq25E" target="_blank" rel="noopener">▶ YouTube</a></li>
-     <li class="item"><span class="title">제12회: 여호와 vs. 예수의 신(성)</span><a href="https://youtu.be/iUudpAtrj9o" target="_blank">▶ YouTube</a></li>
-     <li class="item"><span class="title">제13회: 십일조</span><a href="https://youtu.be/XKuveyzkE3Q" target="_blank">▶ YouTube</a></li>
-     <li class="item"><span class="title">제14회: 사후세계</span><a href="https://youtu.be/GBHfoJ5WEO4" target="_blank">▶ YouTube</a></li>
-     <li class="item"><span class="title">제15회: 모세의 출애굽</span><a href="https://youtu.be/ut7s66h2FZs" target="_blank">▶ YouTube</a></li>
-     <li class="item"><span class="title">제16회: 다윗과 솔로몬 제국의 허상</span><a href="https://youtu.be/hPeLXPMlhA4" target="_blank">▶ YouTube</a></li>
-     </ul>
-  </section>
-
-  <!-- 영어 영상 -->
-  <section id="videos-en" class="section">
-    <div class="title-left">🇺🇸 us English Videos</div> 
-    <ul class="list">
-      <li class="item"><span class="title">Ep.1 — Introduction of BY Kim and NCG</span><a href="https://youtu.be/xqgxrhM1r24" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.2 — Why do we need Religious Revolution — Christian Democracy</span><a href="https://youtu.be/IniMUGC3T9Q" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.3 — Why a Religious Revolution beyond the Reformation</span><a href="https://youtu.be/lWkN4CYJzeY" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.4 — Why a Religious Revolution — Back to the Basics</span><a href="https://youtu.be/2o4DQlfseJE" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.5 — Letters sent to the Christianity World</span><a href="https://youtu.be/CChiJ5zqBUE" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.6 — Declaration of Religious Revolution</span><a href="https://youtu.be/dUE4oor84dI" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.7 — Nosome and Transmigration</span><a href="https://youtu.be/RJLy0bdgQoQ" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.8 — ENZ: Nosome and Quark</span><a href="https://youtu.be/NmZ9FxixN48" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.9 — Afterlife vs. Transmigration Field</span><a href="https://youtu.be/v9fF42xvwWE" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.10 — Oneness</span><a href="https://youtu.be/uTzE24vYqco" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.11: Rebuttal to Roman Curia and Christianity</span><a href="https://youtu.be/ROc29mrzC8w" target="_blank" rel="noopener">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.12 Yahweh vs. Jesus' God(hood)</span><a href="https://youtu.be/4zlMaEBqaNU" target="_blank">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.13 Tithe</span><a href="https://youtu.be/gMURqKiDlEk" target="_blank">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.14 The Afterlife</span><a href="https://youtu.be/X9QygC6bXqE" target="_blank">▶️ Watch</a></li>
-      <li class="item"><span class="title">Ep.15 Moses' Exodus</span><a href="https://youtu.be/7tGGKBsqghk" target="_blank">▶ YouTube</a></li>
-      <li class="item"><span class="title">Ep.16 Illusion of David and Soloon's Empire</span><a href="https://youtu.be/WiTOupqxrfw" target="_blank">▶ YouTube</a></li>
-</ul>
-</div>
-</section>
-
-  <!-- 전체 채널 -->
-  <section id="channel" class="section">
-    <div class="title-left">📺 유튜브 전체 채널(@BYKIM-c2s)</div>
-    <ul class="list">
-      <li class="item"><span class="title">@BYKIM-c2s 채널 바로가기</span>
-        <a href="https://www.youtube.com/@BYKIM-c2s/videos" target="_blank" rel="noopener">▶ Open on YouTube</a></li>
-    </ul>
-  </section>
-
- <!-- 시리즈 안내 페이지 버튼 -->
-<div style="text-align:center; margin:30px 0;">
-  <a href="/NCG_Series_Guide/guide.html?v=3"
-     class="btn"
-     style="background-color:#26b6cb; color:white; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:bold;"
-     target="_blank" rel="noopener">
-     📘 시리즈 안내 보기
-  </a>
-  </div>
-
-<!-- 한국어 연재물 PDF -->
-<section id="kr-pdf" class="section">
-<div class="title-left">📄 하나님과의 대화 연재물 (한국어 PDF)</div>
-    <ul class="list">
-      <li class="item"><span class="title">00. 목차와 프로필</span><a href="00.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">01. 저자와 책 소개</span><a href="1.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">02. 대홍수와 출애굽기</span><a href="2.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">03. 창조론과 진화론</span><a href="3.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">04. 구약성경의 기록 오류-1</span><a href="4.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">05. 구약성경의 기록 오류-2</span><a href="5.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">06. 구약성경의 윤리적 문제-잔혹성</span><a href="6.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">07. 구약성경의 윤리적 문제-문란성</span><a href="7.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">08. 구약성경의 역사적 고찰</span><a href="8.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">09. 구약성경의 기록 시점</span><a href="9.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">10. 구약성경의 효용과 한계</span><a href="10.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">11. 구약성경 vs. 신약성경</span><a href="11.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">12. 예수의 탄생</span><a href="12.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">13. 동정녀 마리아</span><a href="13.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">14. 예수의 성매매 진실</span><a href="14.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">15. 막달라 마리아</span><a href="15.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">16. 성경의 기적</span><a href="16.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">17. 예수의 생애와 진실</span><a href="17.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">18. 예수의 부활과 승천</span><a href="18.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">19. 바울과 베드로</span><a href="19.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">20. 복음서 차이와 신약성경 내의 복음</span><a href="20.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">21. 영혼과 부활</span><a href="21.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">22. 윤회, 원죄설과 대속설</span><a href="22.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">23. 사후세계</span><a href="23.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">24. 천당 vs. 천국</span><a href="24.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">25. 지옥 그리고 연옥 외</span><a href="25.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">26. 여호와 vs. 하나님</span><a href="26.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">27. 종교의 본질</span><a href="27.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">28. 천사와 악마</span><a href="28.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">29. 존재의 본질</span><a href="29.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">30. 존재의 본질 사례</span><a href="30.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">31. 영(靈)의 의미</span><a href="31.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">32. 모든 존재는 하나임</span><a href="32.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">33. 우리 모두가 하나님</span><a href="33.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-      <li class="item"><span class="title">34. 끝맺는 말</span><a href="34.pdf" target="_blank" rel="noopener">📄 한글 연재물 보기</a></li>
-    </ul>
-  </section>
-
-  <footer>Last updated: <span id="ts">—</span></footer>
-</div>
-
-<script>
-  function hideAll(){
-    document.querySelectorAll('section.section').forEach(s => s.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  }
-  function openTab(id, btn){
-    hideAll();
-    const sec = document.getElementById(id);
-    if(sec) sec.classList.add('active');
-    if(btn) btn.classList.add('active');
-    history.replaceState(null,'','#'+id);
-  }
-  // 초기엔 아무 섹션도 자동 표시하지 않음. 해시가 있으면 그 섹션만 열기
+  /* ========= KO 리스트 자동 생성 ========= */
   (function(){
-    hideAll();
-    const h = location.hash && location.hash.replace('#','');
-    if(h){
-      const btn = document.querySelector('.tab-btn[onclick*="'+h+'"]');
-      openTab(h, btn);
+    const list = document.getElementById('video-list-ko');
+    if (!list) return;
+    for (let i=1;i<=EP_MAX;i++){
+      const id = pad2(i);
+      const url = LINKS.ko[id];
+      if (!url) continue; // URL 없는 회차는 노출 안 함
+      const title = (TITLES.ko && TITLES.ko[id]) ? TITLES.ko[id] : '';
+      const li = document.createElement('li');
+      li.className = 'item';
+      li.innerHTML = `<span class="title">${labelOf('ko', i)}</span>${title ? ' : '+title : ''} 
+                      <a href="${url}" target="_blank" rel="noopener">▶ YouTube</a>`;
+      list.appendChild(li);
     }
   })();
-
-  // 간단한 날짜
-  (function(){
-    const d = new Date(); const z = n => String(n).padStart(2,'0');
-    document.getElementById('ts').textContent =
-      d.getFullYear()+'-'+z(d.getMonth()+1)+'-'+z(d.getDate());
-  })();
-</script>
-
-<script>
-/* 모든 .pdf 링크를 Google Docs Viewer로 열도록 변환 */
-(function () {
-  // pdf 링크만 선택 (한국/영문 PDF 섹션 모두 자동 처리)
-  document.querySelectorAll('a[href$=".pdf"]').forEach(function (a) {
-    // 상대경로를 절대경로로 변환
-    var absolute = new URL(a.getAttribute('href'), location.href).href;
-    // gview URL로 치환
-    var gview = 'https://docs.google.com/gview?embedded=1&url=' + encodeURIComponent(absolute);
-    a.setAttribute('href', gview);
-    a.setAttribute('target', '_blank');
-    a.setAttribute('rel', 'noopener');
-  });
-})();
-</script>
-
+  </script>
 </body>
 </html>
-
