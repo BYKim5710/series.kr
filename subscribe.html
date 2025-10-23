@@ -1,94 +1,104 @@
----
-layout: none
----
-
 <!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>구독 / 공유 안내 — NCG 종교혁명 시리즈</title>
 
-  <!-- Open Graph / Twitter -->
-  <meta property="og:url" content="https://bykim5710.github.io/series.kr/subscribe.html">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="신통신통회 종교혁명 시리즈 – 구독/공유 안내">
-  <meta property="og:description" content="채널 구독(팔로우), 알림 설정, 손쉬운 공유 방법을 한 페이지에서 확인하세요!">
-  <meta property="og:image"
-      content="https://bykim5710.github.io/series.kr/ep.{{ site.ep | default: '02' }}-koor.png?v={{ site.ep | default: '02' }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image"
-      content="https://bykim5710.github.io/series.kr/ep.{{ site.ep | default: '02' }}-koor.png?v={{ site.ep | default: '02' }}">
-</head>
-<body>
+  <title>구독 / 공유 안내 – NCG 종교혁명 시리즈</title>
+
+  <!-- Canonical / Robots -->
+  <link rel="canonical" href="https://bykim5710.github.io/series/subscribe.html" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d1117" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph / Twitter (02회차 썸네일 고정) -->
+  <meta property="og:url" content="https://bykim5710.github.io/series/subscribe.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NCG 종교혁명 시리즈 — 구독 / 공유 안내" />
+  <meta property="og:description" content="NCG 종교혁명 시리즈를 구독하고 알림을 켠 뒤, 지인과 커뮤니티에 공유해 주세요." />
+  <meta property="og:image" content="https://bykim5710.github.io/series/ep.02-enor.png?v=02" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="NCG Series Episode 02 Thumbnail" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://bykim5710.github.io/series/ep.02-enor.png?v=02" />
 
   <style>
-    body {background:#0b0f14;color:#e6f0ff;font-family:system-ui,AppleSDGothicNeo,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6;margin:0}
-    .wrap{max-width:860px;margin:24px auto;padding:0 16px}
-    h1{font-size:1.6rem;margin:8px 0 16px}
-    .card{background:#111927;border:1px solid #1d2836;border-radius:16px;padding:18px;margin:14px 0}
-    .btn{display:inline-block;padding:10px 16px;border-radius:10px;border:1px solid #2a75ff;text-decoration:none}
-    .btn{background:#1b3fa7;color:#fff}
-    .btn.ghost{background:transparent;color:#cfe0ff}
-    .grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-    .small{font-size:.95rem;opacity:.95}
-    .muted{opacity:.78}
-    .mono{font-family:ui-monospace,Menlo,Consolas,monospace}
-    .hr{height:1px;background:#1d2836;margin:14px 0}
-  </style>
-  <script>
-    function copyLink() {
-      const url = "https://bykim5710.github.io/series.kr/subscribe.html";
-      navigator.clipboard.writeText(url).then(()=>alert("링크를 복사했습니다."));
+    :root{
+      --bg:#0d1117; --panel:#0f172a; --text:#e6edf3; --muted:#a3b3c4;
+      --accent:#3b82f6; --accent-2:#2563eb; --btn:#1e293b; --border:#1e293b;
     }
-  </script>
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6 }
+    .wrap{ max-width:980px; margin:28px auto; padding:0 16px }
+    header{ background:var(--accent); color:#fff; text-align:center; padding:18px 0; border-radius:16px }
+    header h1{ margin:0; font-size:clamp(22px,2.6vw,28px) }
+    header p{ margin:8px 0 0; opacity:.95 }
+    .panel{ background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px; margin-top:20px }
+    .grid{ display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:8px }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      width:100%; text-decoration:none; padding:14px 16px; border-radius:12px;
+      background:var(--btn); color:#fff; border:1px solid #334155; font-weight:600 }
+    .btn:hover{ background:#111827; border-color:#475569 }
+    .note{ color:var(--muted); font-size:.95rem; margin-top:10px }
+    .muted{ color:var(--muted) }
+    footer{ text-align:center; color:var(--muted); font-size:.9rem; margin:28px 0 16px }
+  </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>구독/공유 안내</h1>
+    <header>
+      <h1>구독 / 공유 안내</h1>
+      <p>NCG 종교혁명 시리즈를 팔로우하고, 세상의 더 많은 이들과 메시지를 나눠 주세요.</p>
+    </header>
 
-    <div class="card">
-      <p class="small">채널을 가장 빠르게 구독하려면 아래 버튼을 누르세요. 유튜브에서 <b>자동 구독 팝업</b>이 뜹니다.</p>
+    <!-- 1) 구독 -->
+    <section class="panel">
+      <h2>1) 구독하기</h2>
       <div class="grid">
-        <!-- 채널 URL은 실제 채널 핸들로 교체 -->
-        <a class="btn" href="https://www.youtube.com/@BYKIM-c2s?sub_confirmation=1" target="_blank" rel="noopener">📺 채널 구독하기</a>
-        <a class="btn ghost" href="https://www.youtube.com/@BYKIM-c2s" target="_blank" rel="noopener">채널 바로가기</a>
+        <a class="btn" href="https://www.youtube.com/@bykim5710" target="_blank" rel="noopener">▶️ 유튜브 채널 구독 (EN/KR)</a>
+        <a class="btn" href="https://bykim5710.github.io/series/" target="_blank" rel="noopener">🌐 메인 시리즈 (English)</a>
+        <a class="btn" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">🌐 메인 시리즈 (한국어)</a>
       </div>
-    </div>
+      <p class="note">구독 후 🔔 알림을 켜면 새 에피소드가 올라올 때 바로 받아보실 수 있습니다.</p>
+    </section>
 
-    <div class="card">
-      <h2 style="margin:0 0 6px">알림 설정</h2>
-      <p class="muted small">새 영상이 올라오면 즉시 알림을 받으세요.</p>
-      <ol class="small">
-        <li>채널 페이지에서 <b>구독</b> 버튼 오른쪽의 <b>🔔 종</b> 아이콘을 누릅니다.</li>
-        <li><b>전체</b> 알림을 선택합니다. (모바일: 채널 > 종 아이콘 / PC: 채널 헤더 영역)</li>
-      </ol>
-      <div class="hr"></div>
-      <p class="small">구독이 잘 되었는지 확인하려면: 유튜브 앱/웹 → <span class="mono">구독 관리</span> → 목록에서 “신통신통회(…)”가 보이는지 확인</p>
-    </div>
-
-    <div class="card">
-      <h2 style="margin:0 0 6px">친구에게 공유하기</h2>
+    <!-- 2) 공유 -->
+    <section class="panel">
+      <h2>2) 공유하기</h2>
+      <p class="muted">아래 링크를 복사해 카카오톡/페이스북/커뮤니티 등에 붙여넣어 주세요.</p>
       <div class="grid">
-        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbykim5710.github.io%2Fseries.kr%2Fsubscribe.html" target="_blank" rel="noopener">Facebook</a>
-        <a class="btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbykim5710.github.io%2Fseries.kr%2Fsubscribe.html&text=%EC%8B%A0%ED%86%B5%EC%8B%A0%ED%86%B5%ED%9A%8C%20%EC%A2%85%EA%B5%90%ED%98%81%EB%AA%85%20%EC%8B%9C%EB%A6%AC%EC%A6%88" target="_blank" rel="noopener">X(트위터)</a>
-        <a class="btn" href="https://api.whatsapp.com/send?text=https%3A%2F%2Fbykim5710.github.io%2Fseries.kr%2Fsubscribe.html" target="_blank" rel="noopener">WhatsApp</a>
-        <button class="btn ghost" onclick="copyLink()">🔗 링크 복사</button>
+        <a class="btn" href="https://bykim5710.github.io/series/" target="_blank" rel="noopener">공유: English Series</a>
+        <a class="btn" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">공유: 한국어 시리즈</a>
+        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbykim5710.github.io%2Fseries%2F" target="_blank" rel="noopener">Facebook 공유 (EN)</a>
+        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbykim5710.github.io%2Fseries.kr%2F" target="_blank" rel="noopener">Facebook 공유 (KR)</a>
       </div>
-      <p class="small muted" style="margin-top:8px">카카오톡은 위 링크를 붙여넣으면 자동 미리보기가 생성됩니다.</p>
-    </div>
+      <p class="note">카카오톡에서 썸네일이 안 바뀌면, 페이스북 디버거에서 “Scrape Again” 후 다시 공유하면 갱신됩니다.</p>
+    </section>
 
-    <div class="card">
-      <p class="small">전체 시리즈 안내: <a class="mono" href="https://bykim5710.github.io/NCG_Series_Guide/guide.html" target="_blank" rel="noopener">https://bykim5710.github.io/NCG_Series_Guide/guide.html</a></p>
-    </div>
+    <!-- 3) 연락처 / 팔로우 -->
+    <section class="panel">
+      <h2>3) 연락처 / 팔로우</h2>
+      <div class="grid">
+        <a class="btn" href="mailto:bykim5710@gmail.com" target="_blank" rel="noopener">✉️ 이메일: bykim5710@gmail.com</a>
+        <a class="btn" href="https://www.facebook.com/groups/964715097572990" target="_blank" rel="noopener">👥 Facebook 그룹 (KR)</a>
+        <a class="btn" href="https://www.facebook.com/groups/814893414319740" target="_blank" rel="noopener">👥 Facebook 그룹 (EN)</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Byung Youn Kim, Chairman of the New Consilience Group (NCG). All rights reserved.
+    </footer>
   </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
 
 
 
