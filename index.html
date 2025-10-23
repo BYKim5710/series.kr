@@ -1,110 +1,134 @@
-<!DOCTYPE html> 
+---
+layout: null
+lang: ko
+ep: "01"          # 기본 회차(옵션) — site.ep가 있으면 그 값이 우선
+---
+
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>유튜브 동영상과 "하나님과의 대화 (Conversation with Oneness God)" 연재물</title>  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {% assign ep = page.ep | default: site.ep | default: '01' %}
+  {% assign base_og = site.base_og | default: '/assets/og' %}
+  {% assign guide_url = site.guide_ko | default: '/NCG_Series_Guide/guide.html' %}
+  {% assign og_img = base_og | append: '/ep.' | append: ep | append: '-koor.png' %}
+
+  <title>신통신통회 종교혁명 시리즈</title>
+  <meta name="description" content="김병윤 회장의 종교혁명 시리즈: 영상, PDF, 추천사, 가이드" />
 
   <!-- Open Graph -->
-<meta property="og:url" content="https://bykim5710.github.io/series.kr/" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="신통신통회 종교혁명 시리즈 (Religious Revolution Series)" />
-<meta property="og:description" content="종교혁명 시리즈 – 각 회차별 영상과 PDF 자료, 한국어/영문 링크 모음" />
-<meta property="og:image" content="https://bykim5710.github.io/series.kr/ep.02-koor.png?v=01" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" /> 
+  <meta property="og:title" content="신통신통회 종교혁명 시리즈" />
+  <meta property="og:description" content="김병윤 회장의 종교혁명 시리즈: 영상, PDF, 추천사, 가이드" />
+  <meta property="og:image" content="{{ og_img }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
 
-<!-- Twitter Card --> 
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://bykim5710.github.io/series.kr/ep.02-koor.png?v=01" />
-  
-<style>
-  :root{
-    --bg:#0b0b10; --panel:#141724; --text:#eef3ff; --muted:#9aa3b2; --link:#78b7ff; --border:#27305e;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui, -apple-system, Segoe UI, Roboto, Apple SD Gothic Neo, Malgun Gothic, Helvetica, Arial, sans-serif;line-height:1.6}
-  .wrap{max-width:980px;margin:28px auto;padding:0 16px}
-  header{margin:0 0 18px}
-  h1{font-size:clamp(22px,3.8vw,30px);margin:0 0 10px}
-  .lead{color:var(--muted);margin:8px 0 14px}
-  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
-  .tab-btn{
-    display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;
-    background:#1a1f34;border:1px solid var(--border);color:#dfe9ff;text-decoration:none;cursor:pointer;font-weight:700;
-  }
-  .tab-btn.active,.tab-btn:hover{outline:1px solid #39528e}
-  .flag{width:22px;height:16px;display:inline-block;vertical-align:middle}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="신통신통회 종교혁명 시리즈" />
+  <meta name="twitter:description" content="김병윤 회장의 종교혁명 시리즈: 영상, PDF, 추천사, 가이드" />
+  <meta name="twitter:image" content="{{ og_img }}" />
 
-  section.section{display:none}
-  section.section.active{display:block}
-
-  .section{background:var(--panel);border:1px solid #212744;border-radius:10px;padding:14px;margin:16px 0}
-  .title-left{font-weight:700;margin-bottom:8px}
-  ul.list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  @media (max-width:760px){ ul.list{grid-template-columns:1fr} }
-  li.item{background:#0f1328;border:1px solid #1e274a;border-radius:10px;padding:12px}
-  .item .title{font-weight:700;margin-bottom:6px;display:block}
-  .item a{color:var(--link);text-decoration:none}
-  .item a:hover{text-decoration:underline}
-  footer{color:var(--muted);font-size:12px;margin:24px 0 10px;text-align:right} 
-/* ===== KakaoTalk / Mobile view fix ===== */
-@media (max-width: 768px) {
-  table {
-    table-layout: auto !important;
-    width: 100% !important;
-  }
-  th, td {
-    white-space: normal !important;
-    word-break: keep-all !important;
-    overflow-wrap: anywhere !important;
-    vertical-align: top !important;
-    line-height: 1.6 !important;
-  }
-  .col-set, .col-yt, [class*="col-"] {
-    width: auto !important;
-  }
-  th:nth-child(1), td:nth-child(1) { width: 25% !important; } /* 세트 */
-  th:nth-child(2), td:nth-child(2) { width: 55% !important; } /* 제목 */
-  th:nth-child(3), td:nth-child(3) { width: 20% !important; } /* 링크 */
-}
- 모바일에서는 항상 오른쪽 하단에
- .footer-actions {
-  margin-top: 18px;
-  display: flex;
-  justify-content: center;
-} 
-/* ===== /KakaoTalk / Mobile view fix ===== */
-</style>
+  <style>
+    :root{--bg:#0b0b0c;--fg:#eaecef;--muted:#a7acb5;--accent:#9be864}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
+    header{padding:20px 16px;border-bottom:1px solid #222}
+    .wrap{max-width:980px;margin:0 auto}
+    .hero{display:grid;gap:16px;align-items:center;padding:32px 16px}
+    .thumb{width:100%;max-width:680px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    a.btn{display:inline-block;padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:600}
+    a.primary{background:var(--accent);color:#0b0b0c}
+    a.ghost{border:1px solid #333;color:var(--fg)}
+    .muted{color:var(--muted);font-size:.95rem}
+    @media (min-width: 860px){.hero{grid-template-columns: 1.1fr .9fr}}
+  </style>
 </head>
-
 <body>
-<div class="wrap">
-<header>
-  <h1>유튜브 동영상과 “하나님과의 대화 (Conversation with Oneness God)” 연재물</h1>
-  <p class="lead">아래 탭을 눌러 보실 내용을 선택하세요. 선택된 항목만 표시됩니다.</p>
+  <header>
+    <div class="wrap" role="navigation" aria-label="Top">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <strong>NCG</strong>
+        <nav style="display:flex;gap:14px;align-items:center">
+          <a class="muted" href="{{ guide_url }}">시리즈 가이드</a>
+          <span class="muted">EP<span aria-hidden="true">.</span><span id="ep-badge">{{ ep }}</span></span>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-  <!-- Tabs -->
-  <div class="tabs">
-  <!-- 한국어 영상 -->
-<button class="tab-btn" onclick="openTab('videos-kr', this)">
-  <img class="flag" src="koreanflag.jpg" alt="대한민국 태극기" />
-  한국어 영상
-</button>
-  
-    <!-- English Videos -->
-    <button class="tab-btn" onclick="openTab('videos-en', this)"><img class="flag" src="americanflag.jpg" alt="미국 성조기" /> English Videos
-    </button>
+  <!-- ===== 통합 히어로 섹션 (동영상 목록 이전) ===== -->
+  <main>
+    <section class="wrap hero" id="intro">
+      <img class="thumb" id="hero-thumb" alt="제 {{ ep }}회 썸네일" src="{{ og_img }}">
+      <div>
+        <h1 style="margin:0 0 8px">제 <span id="h1-ep">{{ ep }}</span>회 — 시리즈 소개</h1>
+        <p class="muted" style="margin:0 0 18px">
+          철학·과학·영성이 만나 종교혁명으로 이어지는 여정을 소개합니다.
+        </p>
+        <div class="actions">
+          <a class="btn primary" id="watch-btn" href="{{ guide_url }}" target="_blank" rel="noopener">영상 보기 →</a>
+          <a class="btn ghost" href="{{ guide_url }}">시리즈 가이드</a>
+        </div>
+        <p class="muted" style="margin-top:10px">
+          URL에 <code>?ep=03</code>처럼 붙이면 페이지 내 표시가 03회로 변경됩니다.
+        </p>
+      </div>
+    </section>
+  </main>
 
-    <!-- 전체 채널 -->
-    <button class="tab-btn" onclick="openTab('channel', this)"> 📺 유튜브 전체 채널(@BYKIM-c2s)
-    </button>
+  <script>
+  (function(){
+    const qs = new URLSearchParams(location.search);
+    const epQS = qs.get('ep');
+    const ep = epQS || "{{ ep }}";
 
-    <!-- PDF 연재물 -->
-    <button class="tab-btn" onclick="openTab('kr-pdf', this)"> 📄 하나님과의 대화 연재물(PDF)
-    </button>
-    
-</header>
+    document.getElementById('ep-badge').textContent = ep;
+    document.getElementById('h1-ep').textContent = ep;
+
+    // 섬네일 교체 (koor: 한국어판 / enor: 영어판)
+    var baseOg = "{{ base_og }}";
+    var suffix = "{{ lang }}" === "en" ? "-enor.png" : "-koor.png";
+    var img = baseOg + "/ep." + ep + suffix;
+    document.getElementById('hero-thumb').setAttribute('src', img);
+
+    // ===== 회차별 영상 링크 (01~16) =====
+    var links = {
+      "01": https://youtu.be/o9kSstxgDaw
+      "02": https://youtu.be/gylO_88pDuc
+      "03": https://youtu.be/udOK740VFU8
+      "04": https://youtu.be/JK5RTxrVzPw
+      "05": https://youtu.be/KtU5ww--3kg
+      "06": https://youtu.be/l-Cw7woND8I
+      "07": https://youtu.be/1PmZOU5kS48
+      "08": https://youtu.be/Dw-fekBj8Z8
+      "09": https://youtu.be/8xgmPHNJ1g8
+      "10": https://youtu.be/vxlGrY75sXQ
+      "11": https://youtu.be/xWXteiQq25E
+      "12": https://youtu.be/iUudpAtrj9o
+      "13": https://youtu.be/XKuveyzkE3Q
+      "14": https://youtu.be/GBHfoJ5WEO4
+      "15": https://youtu.be/ut7s66h2FZs
+      "16": https://youtu.be/hPeLXPMlhA4
+    };
+
+    // ===== 연결 로직 =====
+    var a = document.getElementById('watch-btn');
+    a.href = links[ep] || "{{ guide_url }}";
+  })();
+</script>
+
+  <!-- ===== 여기부터 기존 동영상/연재물 리스트 유지 ===== -->
+  <!-- <section id="episodes"> ... 기존 내용 ... </section> -->
+
+  <footer class="wrap" style="padding:24px 16px 48px">
+    <p class="muted">© {{ 'now' | date: '%Y' }} NCG — BY Kim</p>
+  </footer>
+</body>
+</html>
 
 
   <!-- 한국어 영상 -->
