@@ -1,47 +1,45 @@
+---
+layout: none
+---
+{% assign ep = site.ep | default: '01' %}
+
 <!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>구독 / 공유 안내 – NCG 종교혁명 시리즈</title>
+  <title>구독 / 공유 안내 – NCG 종교혁명 시리즈 (제{{ ep }}회)</title>
 
   <!-- Canonical / Robots -->
-  <link rel="canonical" href="https://bykim5710.github.io/series.kr/subscribe.html" />
+  <link rel="canonical" href="{{ site.bases.kr }}/subscribe.html" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0d1117" />
   <link rel="icon" href="/favicon.ico" />
 
-  <!-- Open Graph / Twitter (Ep.02 한글 썸네일) -->
-  <meta property="og:url" content="https://bykim5710.github.io/series.kr/subscribe.html" />
+  <!-- Open Graph / Twitter (auto by ep) -->
+  <meta property="og:url" content="{{ site.bases.kr }}/subscribe.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="신통신통회 종교혁명 시리즈 — 구독/공유 안내" />
+  <meta property="og:title" content="신통신통회 종교혁명 시리즈 — 구독/공유 안내 (제{{ ep }}회)" />
   <meta property="og:description" content="채널 구독(알림)과 손쉬운 공유 방법을 한 페이지에서 확인하세요." />
-  <meta property="og:image" content="https://bykim5710.github.io/series.kr/ep.02-koor.png?v=02" />
+  <meta property="og:image" content="{{ site.bases.kr }}/ep.{{ ep }}-koor.png?v={{ ep }}" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="NCG 시리즈 제2회 한국어 썸네일" />
+  <meta property="og:image:alt" content="NCG 시리즈 제{{ ep }}회 한국어 썸네일" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://bykim5710.github.io/series.kr/ep.02-koor.png?v=02" />
+  <meta name="twitter:image" content="{{ site.bases.kr }}/ep.{{ ep }}-koor.png?v={{ ep }}" />
 
   <style>
-    :root{ --bg:#0d1117; --panel:#0f172a; --text:#e6edf3; --muted:#a3b3c4;
-           --accent:#3b82f6; --btn:#1e293b; --border:#1e293b; }
-    *{ box-sizing:border-box }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
-      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6 }
+    :root{ --bg:#0d1117; --panel:#0f172a; --text:#e6edf3; --muted:#a3b3c4; --accent:#3b82f6; --btn:#1e293b; --border:#1e293b; }
+    *{ box-sizing:border-box } html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6 }
     .wrap{ max-width:980px; margin:28px auto; padding:0 16px }
     header{ background:var(--accent); color:#fff; text-align:center; padding:18px 0; border-radius:16px }
-    header h1{ margin:0; font-size:clamp(22px,2.6vw,28px) }
-    header p{ margin:8px 0 0; opacity:.95 }
+    header h1{ margin:0; font-size:clamp(22px,2.6vw,28px) } header p{ margin:8px 0 0; opacity:.95 }
     .panel{ background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px; margin-top:20px }
     .grid{ display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:8px }
-    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      width:100%; text-decoration:none; padding:14px 16px; border-radius:12px;
-      background:var(--btn); color:#fff; border:1px solid #334155; font-weight:600 }
-    .btn:hover{ background:#111827; border-color:#475569 }
-    .note{ color:var(--muted); font-size:.95rem; margin-top:10px }
-    .muted{ color:var(--muted) }
-    footer{ text-align:center; color:var(--muted); font-size:.9rem; margin:28px 0 16px }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; text-decoration:none; padding:14px 16px; border-radius:12px; background:var(--btn); color:#fff; border:1px solid #334155; font-weight:600 }
+    .btn:hover{ background:#111827; border-color:#475569 } .note{ color:var(--muted); font-size:.95rem; margin-top:10px }
+    .muted{ color:var(--muted) } footer{ text-align:center; color:var(--muted); font-size:.9rem; margin:28px 0 16px }
   </style>
 </head>
 <body>
@@ -55,9 +53,9 @@
     <section class="panel">
       <h2>1) 구독하기</h2>
       <div class="grid">
-        <a class="btn" href="https://www.youtube.com/@BYKIM-c2s" target="_blank" rel="noopener">▶️ 유튜브 채널 구독 (EN/KR)</a>
-        <a class="btn" href="https://bykim5710.github.io/series/" target="_blank" rel="noopener">🌐 Main Series (English)</a>
-        <a class="btn" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">🌐 메인 시리즈 (한국어)</a>
+        <a class="btn" href="https://www.youtube.com/{{ site.youtube_handle }}" target="_blank" rel="noopener">▶️ 유튜브 채널 구독 (EN/KR)</a>
+        <a class="btn" href="{{ site.bases.en }}/" target="_blank" rel="noopener">🌐 Main Series (English)</a>
+        <a class="btn" href="{{ site.bases.kr }}/" target="_blank" rel="noopener">🌐 메인 시리즈 (한국어)</a>
       </div>
       <p class="note">
         구독 후 🔔 알림을 켜면 새 에피소드가 올라올 때 바로 받아보실 수 있습니다.<br>
@@ -70,10 +68,10 @@
       <h2>2) 공유하기</h2>
       <p class="muted">아래 버튼을 눌러 링크를 복사하거나, SNS/카카오톡/페이스북에 붙여넣어 공유하세요.</p>
       <div class="grid">
-        <a class="btn" href="https://bykim5710.github.io/series/" target="_blank" rel="noopener">공유: English Series</a>
-        <a class="btn" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">공유: 한국어 시리즈</a>
-        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbykim5710.github.io%2Fseries%2F" target="_blank" rel="noopener">Facebook 공유 (EN)</a>
-        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbykim5710.github.io%2Fseries.kr%2F" target="_blank" rel="noopener">Facebook 공유 (KR)</a>
+        <a class="btn" href="{{ site.bases.en }}/" target="_blank" rel="noopener">공유: English Series</a>
+        <a class="btn" href="{{ site.bases.kr }}/" target="_blank" rel="noopener">공유: 한국어 시리즈</a>
+        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u={{ site.bases.en | uri_escape }}%2F" target="_blank" rel="noopener">Facebook 공유 (EN)</a>
+        <a class="btn" href="https://www.facebook.com/sharer/sharer.php?u={{ site.bases.kr | uri_escape }}%2F" target="_blank" rel="noopener">Facebook 공유 (KR)</a>
       </div>
       <p class="note">
         📱 스마트폰: ‘복사하기 → 카카오톡 대화창 붙여넣기’만으로 공유할 수 있습니다.<br>
@@ -85,7 +83,7 @@
     <section class="panel">
       <h2>3) 연락처 / 팔로우</h2>
       <div class="grid">
-        <a class="btn" href="mailto:bykim57@hanmail.net" target="_blank" rel="noopener">✉️ 이메일: bykim57@hanmail.net</a>
+        <a class="btn" href="mailto:{{ site.email.kr }}" target="_blank" rel="noopener">✉️ 이메일: {{ site.email.kr }}</a>
         <a class="btn" href="https://www.facebook.com/groups/964715097572990" target="_blank" rel="noopener">👥 Facebook 그룹 (KR)</a>
         <a class="btn" href="https://www.facebook.com/groups/814893414319740" target="_blank" rel="noopener">👥 Facebook 그룹 (EN)</a>
       </div>
