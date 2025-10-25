@@ -1,30 +1,37 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>신통신통회 종교혁명 시리즈 – 한국어 가이드</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>신통신통회 종교혁명 시리즈 – 한국어 가이드</title>
 
-<!-- ✅ KR 가이드로 자동 이동 -->
-<meta http-equiv="refresh" content="0; url=/series.kr/guide.html?v=20251027">
-<script>location.replace("/series.kr/guide.html?v=20251027");</script>
-
-<!-- Open Graph -->
-<meta property="og:url" content="https://bykim5710.github.io/series.kr/" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="신통신통회 종교혁명 시리즈 – 한국어 가이드" />
-<meta property="og:description" content="김병윤 회장의 종교혁명 시리즈 한국어 자료 모음. 영상과 PDF, 가이드 링크를 한 곳에서 확인하세요." />
-<meta property="og:image" content="https://bykim5710.github.io/series.kr/ep.02-koor.png?v=20251027" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="신통신통회 종교혁명 시리즈 – 한국어 가이드" />
-<meta name="twitter:description" content="김병윤 회장의 종교혁명 시리즈 한국어 자료 모음. 영상과 PDF, 가이드 링크를 한 곳에서 확인하세요." />
-<meta name="twitter:image" content="https://bykim5710.github.io/series.kr/ep.02-koor.png?v=20251027" />
+  <!-- 1차 시도: 가장 유력한 경로로 meta-refresh (구형/인앱 대비) -->
+  <meta http-equiv="refresh" content="0; url=/series.kr/guide.html?v=20251027">
+  <link rel="canonical" href="/series.kr/guide.html?v=20251027">
 </head>
 <body>한국어 가이드로 이동 중입니다…</body>
+
+<script>
+(async () => {
+  // ✅ 가능한 모든 후보 경로(상황별로 404 방지)
+  const v = "20251027";
+  const candidates = [
+    `/series.kr/guide.html?v=${v}`,                 // 루트 직하 guide.html
+    `/NCG_Series_Guide_KR/guide.html?v=${v}`,       // 기존 KR 가이드 폴더
+    `/series.kr/NCG_Series_Guide_KR/guide.html?v=${v}`, // series.kr 하위에 폴더가 있을 경우
+    `/NCG_Series_Guide_KR/?v=${v}`,                 // 폴더 index.html 서빙
+    `/series.kr/?v=${v}`                            // 최후: 자기 자신(루프 방지를 위해 마지막)
+  ];
+
+  for (const url of candidates) {
+    try {
+      const res = await fetch(url, { method: 'HEAD', cache: 'no-store' });
+      if (res.ok) { location.replace(url); return; }
+    } catch (e) { /* 다음 후보 계속 */ }
+  }
+  // 모두 실패 시: 화면에 안내 유지
+})();
+</script>
 </html>
   
 <style>
