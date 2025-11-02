@@ -1,276 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>신통신통회 구독 / 공유 안내</title>
 
-  <!-- Open Graph / Kakao / Facebook preview -->
+  <!-- Open Graph / Kakao / Facebook -->
   <meta property="og:url" content="https://bykim5710.github.io/series.kr/subscribe.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="신통신통회 종교혁명 시리즈 — 구독 / 공유 안내" />
-  <meta property="og:description" content="최신 회차 영상, 전체 시리즈(한글/영문), 페이스북 그룹, 그리고 유튜브 구독 방법을 한 곳에 모았습니다." />
-  <meta property="og:image" content="https://bykim5710.github.io/series.kr/ep.03-koor.png" />
+  <meta property="og:description" content="신통신통회 종교혁명 시리즈(한글/영문), 유튜브 구독, 페이스북 그룹 안내를 한 곳에 모았습니다." />
+  <meta property="og:image" content="https://bykim5710.github.io/series.kr/og-latest-kr.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="신통신통회 / NCG Series" />
 
-  <!-- Twitter / X Card -->
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="신통신통회 종교혁명 시리즈 — 구독 / 공유 안내" />
-  <meta name="twitter:description" content="신통신통회 종교혁명 시리즈(한글/영문), 페이스북 그룹, 유튜브 구독 안내." />
-  <meta name="twitter:image" content="https://bykim5710.github.io/series.kr/ep.03-koor.png" />
+  <meta name="twitter:description" content="신통신통회 종교혁명 시리즈를 더 널리 전해 주세요." />
+  <meta name="twitter:image" content="https://bykim5710.github.io/series.kr/og-latest-kr.png" />
   <meta name="twitter:url" content="https://bykim5710.github.io/series.kr/subscribe.html" />
 
-  <style>
-    :root {
-      --bg:#0b0d11;
-      --panel:#141724;
-      --panel-alt:#1b1f2f;
-      --border:#27305e;
-      --text:#eef3ff;
-      --muted:#9aa3b2;
-      --link:#78b7ff;
-      --accent:#3b82f6;
-    }
-    *{box-sizing:border-box;}
-    body{
-      margin:0;
-      padding:24px;
-      background:var(--bg);
-      color:var(--text);
-      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.5;
-      font-size:16px;
-    }
-
-    h2{
-      margin:24px 0 12px 0;
-      font-size:1rem;
-      font-weight:600;
-      color:var(--text);
-    }
-
-    /* 상단 안내 헤더(히어로) */
-    .hero{
-      background:linear-gradient(
-        to bottom right,
-        rgba(59,130,246,0.9),
-        rgba(59,130,246,0.5)
-      );
-      border-radius:10px;
-      padding:20px 24px;
-      border:1px solid rgba(255,255,255,0.15);
-      max-width:800px;
-      margin:0 auto 24px auto;
-      box-shadow:0 12px 24px rgba(0,0,0,0.6);
-      text-align:center;
-    }
-    .hero-title{
-      font-size:1.25rem;
-      font-weight:600;
-      color:#fff;
-      margin-bottom:8px;
-      line-height:1.4;
-    }
-    .hero-desc{
-      font-size:0.95rem;
-      font-weight:400;
-      color:#e9eeff;
-      line-height:1.4;
-      max-width:700px;
-      margin:0 auto;
-    }
-
-    /* 전체 섹션 래퍼 */
-    .section-wrap{
-      max-width:800px;
-      margin:0 auto 24px auto;
-    }
-
-    /* 카드형 버튼 (한 줄) */
-    .row-card{
-  width:100%;
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:8px;
-  padding:14px 16px;
-  font-size:0.95rem;
-  line-height:1.4;
-  color:var(--text);
-  display:flex;
-  align-items:center;
-  justify-content:center;   /* ✅ 가운데 정렬 추가 */
-  gap:8px;
-  margin-bottom:8px;
-  text-decoration:none;
-  font-weight:600;  
-    }
-    
-    .row-card:hover{
-      background:var(--panel-alt);
-    }
-    .row-icon{
-  font-size:0.9rem;
-  min-width:1rem;  /* 기존 1.2rem → 살짝 줄이면 균형 좋아짐 */
-  text-align:center;
-  color:var(--accent);
-}
-    
-      .row-label{
-      color:var(--text);
-      font-weight:500;
-      word-break:keep-all;
-    }
-
-    /* 안내문(힌트) */
-    .hint{
-      font-size:0.9rem;
-      color:var(--muted);
-      line-height:1.4;
-      margin:8px 0 0 0;
-      text-align:center;  /* 요청: 중앙 정렬 */
-      word-break:keep-all;
-    }
-
-    /* 연락/팔로우 영역 */
-    .contact-card{
-      background:var(--panel);
-      border:1px solid var(--border);
-      border-radius:8px;
-      padding:16px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:16px;
-    }
-    .contact-block{
-      flex:1 1 220px;
-      background:var(--panel-alt);
-      border:1px solid var(--border);
-      border-radius:8px;
-      padding:12px 16px;
-      color:var(--text);
-      font-size:0.9rem;
-      line-height:1.4;
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-    }
-    .contact-head{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      font-weight:500;
-      color:var(--text);
-    }
-    .contact-head .icon{
-      font-size:0.9rem;
-      color:var(--accent);
-      min-width:1.2rem;
-      text-align:center;
-    }
-    .contact-link{
-      color:var(--link);
-      text-decoration:none;
-      word-break:break-all;
-    }
-    .contact-link:hover{
-      text-decoration:underline;
-    }
-
-    a{
-      color:var(--link);
-      text-decoration:none;
-    }
-    a:hover{
-      text-decoration:underline;
-    }
-
-    /* 저작권 / 고지문 */
-    .footer-note{
-      font-size:0.8rem;
-      color:var(--muted);
-      line-height:1.4;
-      margin:24px auto 0 auto;
-      text-align:center;   /* 요청: 중앙 정렬 */
-      max-width:800px;
-    }
-
-    @media (max-width:480px){
-      body{
-        padding:16px;
-        font-size:15px;
-      }
-      .hero{
-        padding:16px;
-      }
-      .hero-title{
-        font-size:1.15rem;
-      }
-    }
+ <style>
+    :root{ --bg:#0d1117; --panel:#0f172a; --text:#e6edf3; --muted:#a3b3c4;
+           --accent:#3b82f6; --btn:#1e293b; --border:#1e293b; }
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6 }
+    .wrap{ max-width:980px; margin:28px auto; padding:0 16px }
+    header{ background:var(--accent); color:#fff; text-align:center; padding:18px 0; border-radius:16px }
+    header h1{ margin:0; font-size:clamp(22px,2.6vw,28px) }
+    header p{ margin:8px 0 0; opacity:.95 }
+    .panel{ background:var(--panel); border:1px solid var(--border); border-radius:16px; padding:20px; margin-top:20px }
+    .grid{ display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); margin-top:8px }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      width:100%; text-decoration:none; padding:14px 16px; border-radius:12px;
+      background:var(--btn); color:#fff; border:1px solid #334155; font-weight:600 }
+    .btn:hover{ background:#111827; border-color:#475569 }
+    .note{ color:var(--muted); font-size:.95rem; margin-top:10px; text-align:center }
+    footer{ text-align:center; color:var(--muted); font-size:.9rem; margin:28px 0 16px }
   </style>
 </head>
 <body>
-
-  <!-- 상단: 구독/공유 가이드 헤더 -->
-  <section class="hero">
-    <div class="hero-title">구독 / 공유 가이드</div>
-    <div class="hero-desc">
-      신통신통회 종교혁명 시리즈(신통신통회·NCG)의 메시지를
-      더 많은 사람들에게 전해 주세요.
-    </div>
-  </section>
-
-  <div class="section-wrap">
+  <div class="wrap">
+    <header>
+      <h1>구독 / 공유 가이드</h1>
+      <p>신통신통회 종교혁명 시리즈(신통신통회 · NCG)의 메시지를 더 많은 사람들에게 전해 주세요.</p>
+    </header>
 
     <!-- 1) 구독하기 -->
-    <h2>1) 구독하기</h2>
-
-    <a class="row-card" href="https://www.youtube.com/@BYKIM-c2s" target="_blank" rel="noopener">
-      <div class="row-icon">▶</div>
-      <div class="row-label">YouTube에서 구독하기 (한글/영문)</div>
-    </a>
-
-    <p class="hint">
-      구독 후에는 알림(🔔)을 켜 주세요.
-      YouTube에서 <strong>구독</strong>을 누른 다음
-      <strong>모든 알림(All Notifications)</strong>을 허용하시면
-      새 영상이 올라올 때 즉시 알 수 있습니다.
-    </p>
-
-    <!-- 2) 시리즈 / 공유 링크 -->
-    <h2>2) 시리즈 / 공유 링크</h2>
-
-    <!-- 한글 먼저 -->
-    <a class="row-card" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">
-      <div class="row-icon">🌐</div>
-      <div class="row-label">메인 시리즈 (한글)</div>
-    </a>
-
-    <a class="row-card" href="https://bykim5710.github.io/series/" target="_blank" rel="noopener">
-      <div class="row-icon">🌐</div>
-      <div class="row-label">메인 시리즈 (영문)</div>
-    </a>
-
-    <a class="row-card" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">
-      <div class="row-icon">▉</div>
-      <div class="row-label">페이스북 공유용 (한글 게시물)</div>
-    </a>
-
-    <a class="row-card" href="https://bykim5710.github.io/series/" target="_blank" rel="noopener">
-      <div class="row-icon">▉</div>
-      <div class="row-label">페이스북 공유용 (영문 게시물)</div>
-    </a>
-
-        <!-- 3) 연락처 / 팔로우 -->
     <section class="panel">
-      <h2>3) 연락처 / 팔로우</h2>
+      <h3>1) 구독하기</h3>
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://www.youtube.com/@BYKIM-c2s?sub_confirmation=1">
+        ▶ YouTube에서 구독하기 (한글/영문)
+      </a>
+      <p class="note">
+        구독 후에는 알림(🔔)을 켜 주세요.<br/>
+        YouTube에서 <b>구독</b>을 누른 다음 <b>모든 알림(All Notifications)</b>을 허용하시면
+        새 영상이 올라올 때 바로 알 수 있습니다.
+      </p>
+    </section>
+
+    <!-- 2) 전체 시리즈 / 공유 -->
+    <section class="panel">
+      <h3>2) 전체 시리즈 / 공유</h3>
+
+      <!-- 한글 먼저 -->
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://bykim5710.github.io/series.kr/">
+        🌐 메인 시리즈 (한글)
+      </a>
+
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://bykim5710.github.io/series/">
+        🌐 Main Series (English)
+      </a>
+
+      <!-- 페이스북 공유용: 사실상 동일 URL이지만, 사용자가 "한글 게시물" / "영문 게시물" 구분해서 붙여넣기 좋게 텍스트만 안내 -->
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://bykim5710.github.io/series.kr/">
+        📘 페이스북 공유용 (한글 게시물)
+      </a>
+
+      <a class="btn" target="_blank" rel="noopener"
+         href="https://bykim5710.github.io/series/">
+        📘 Share to Facebook (English post)
+      </a>
+    </section>
+
+    <!-- 3) 연락처 / 팔로우 -->
+    <section class="panel">
+      <h3>3) 연락처 / 팔로우</h3>
+
       <div class="grid">
-        <a class="btn" href="mailto:bykim57@hanmail.net" target="_blank" rel="noopener">✉️ 이메일: bykim57@hanmail.net</a>
-        <a class="btn" href="https://www.facebook.com/groups/964715097572990" target="_blank" rel="noopener">👥 Facebook 그룹 (KR)</a>
-        <a class="btn" href="https://www.facebook.com/groups/814893414319740" target="_blank" rel="noopener">👥 Facebook 그룹 (EN)</a>
+        <a class="btn" href="mailto:bykim57@hanmail.net" target="_blank" rel="noopener">
+          ✉ 이메일: bykim57@hanmail.net
+        </a>
+
+        <a class="btn" href="https://www.facebook.com/groups/964715097572990"
+           target="_blank" rel="noopener">
+          👥 Facebook 그룹 (KR)
+        </a>
+
+        <a class="btn" href="https://www.facebook.com/groups/814893414319740"
+           target="_blank" rel="noopener">
+          👥 Facebook Group (EN)
+        </a>
       </div>
     </section>
 
@@ -279,7 +117,8 @@
     </footer>
   </div>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
