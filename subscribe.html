@@ -267,16 +267,14 @@
         <a class="btn" href="mailto:bykim571020@gmail.com" target="_blank" rel="noopener">✉️ Email: bykim57@hanmail.net</a>
         <a class="btn" href="https://www.facebook.com/groups/964715097572990" target="_blank" rel="noopener">👥 Facebook Group (KR)</a>
         <a class="btn" href="https://www.facebook.com/groups/814893414319740" target="_blank" rel="noopener">👥 Facebook Group (EN)</a>
-      </div>
+       </div>
     </section>
-      
-    <!-- 저작권/고지문: 중앙 정렬 -->
-    <div class="footer-note">
-      © 2025 Byung Youn Kim, Chairman of the New Consilience Group (NCG).  
-      All rights reserved.
-    </div>
 
-  </div> <!-- /section-wrap -->
+    <footer>
+      © <span id="year"></span> Byung Youn Kim, Chairman of the New Consilience Group (NCG). All rights reserved.
+    </footer>
+  </div>
 
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
