@@ -92,30 +92,34 @@
 
     /* 카드형 버튼 (한 줄) */
     .row-card{
-      width:100%;
-      background:var(--panel);
-      border:1px solid var(--border);
-      border-radius:8px;
-      padding:14px 16px;
-      font-size:0.95rem;
-      line-height:1.4;
-      color:var(--text);
-      display:flex;
-      align-items:center;
-      gap:8px;
-      margin-bottom:8px;
-      text-decoration:none;
+  width:100%;
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:14px 16px;
+  font-size:0.95rem;
+  line-height:1.4;
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;   /* ✅ 가운데 정렬 추가 */
+  gap:8px;
+  margin-bottom:8px;
+  text-decoration:none;
+  font-weight:600;  
     }
+    
     .row-card:hover{
       background:var(--panel-alt);
     }
     .row-icon{
-      font-size:0.9rem;
-      min-width:1.2rem;
-      text-align:center;
-      color:var(--accent);
-    }
-    .row-label{
+  font-size:0.9rem;
+  min-width:1rem;  /* 기존 1.2rem → 살짝 줄이면 균형 좋아짐 */
+  text-align:center;
+  color:var(--accent);
+}
+    
+      .row-label{
       color:var(--text);
       font-weight:500;
       word-break:keep-all;
