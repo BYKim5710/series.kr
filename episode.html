@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>신통신통회 시리즈 – 개별 회차</title>
+
+  <!-- 기본 Open Graph (공유용 기본값 – JS로는 변경 불가) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="신통신통회 영상 시리즈 – 개별 회차" />
+  <meta property="og:description" content="제목과 번호는 URL의 ?v=회차번호 로 자동 설정됩니다. 예: episode.html?v=4" />
+  <meta property="og:image" content="https://bykim5710.github.io/series.kr/ep.04-koor.png" />
+  <meta property="og:url" content="https://bykim5710.github.io/series.kr/episode.html" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="신통신통회 영상 시리즈 – 개별 회차" />
+  <meta name="twitter:description" content="?v=회차번호로 각 회차를 자동 표시합니다." />
+  <meta name="twitter:image" content="https://bykim5710.github.io/series.kr/ep.04-koor.png" />
+
+  <style>
+    :root {
+      --bg-color: #000000;
+      --text-color: #f5f5f5;
+      --btn-radius: 9999px;
+      --btn-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+      --btn-font-size: 1.05rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      text-align: center;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .buttons {
+      width: 100%;
+      max-width: 640px;
+      margin: 40px auto 80px;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 24px;
+      border-radius: var(--btn-radius);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: var(--btn-font-size);
+      color: #ffffff;
+      box-shadow: var(--btn-shadow);
+      transition: transform 0.08s ease-out, box-shadow 0.08s ease-out,
+        opacity 0.1s ease-out;
+      letter-spacing: 0.02em;
+    }
+
+    .btn span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(37, 99, 235, 0.6);
+    }
+
+    .btn-success {
+      background: #16a34a;
+    }
+
+    .btn-success:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(22, 163, 74, 0.6);
+    }
+
+    .btn-warning {
+      background: #ea580c;
+    }
+
+    .btn-warning:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 40px rgba(234, 88, 12, 0.6);
+    }
+
+    .btn:active {
+      transform: translateY(1px) scale(0.99);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      opacity: 0.9;
+    }
+
+    @media (min-width: 768px) {
+      .buttons {
+        gap: 22px;
+      }
+      .btn {
+        padding: 20px 28px;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 상단 섬네일 -->
+    <section class="hero">
+      <img
+        id="hero-image"
+        src="ep.04-koor.png"
+        alt="신통신통회 시리즈 썸네일"
+      />
+    </section>
+
+    <!-- 큰 동그란 버튼 3개 -->
+    <section class="buttons">
+      <a
+        id="watch-button"
+        class="btn btn-primary"
+        href="#"
+        target="_blank"
+        rel="noopener"
+      >
+        <span id="watch-label">🎬 제00회 영상 보기</span>
+      </a>
+
+      <a
+        id="series-button"
+        class="btn btn-success"
+        href="https://bykim5710.github.io/series.kr/"
+        target="_blank"
+        rel="noopener"
+      >
+        <span>📚 전체 시리즈 보기</span>
+      </a>
+
+      <a
+        id="subscribe-button"
+        class="btn btn-warning"
+        href="https://bykim5710.github.io/series.kr/subscribe.html"
+        target="_blank"
+        rel="noopener"
+      >
+        <span>🌐 구독 / 공유</span>
+      </a>
+    </section>
+  </div>
+
+  <script>
+    // 1~16회 한국어 에피소드 정보
+    const episodes = [
+      {
+        id: 1,
+        title: "제1회: 저자 책 및 신통신통회 소개",
+        thumb: "ep.01-koor.png",
+        youtube: "https://youtu.be/o9kSstxgDaw",
+      },
+      {
+        id: 2,
+        title: "제2회: 왜 종교혁명이 필요한가? — 기독교민주주의",
+        thumb: "ep.02-koor.png",
+        youtube: "https://youtu.be/gylO_88pDuc",
+      },
+      {
+        id: 3,
+        title: "제3회: 왜 종교혁명인가? — 종교개혁의 미완성",
+        thumb: "ep.03-koor.png",
+        youtube: "https://youtu.be/udOK740VFU8",
+      },
+      {
+        id: 4,
+        title: "제4회: 왜 종교혁명인가? — 기본으로 돌아가자",
+        thumb: "ep.04-koor.png",
+        youtube: "https://youtu.be/JK5RTxrVzPw",
+      },
+      {
+        id: 5,
+        title: "제5회: 기독교계에 보낸 편지",
+        thumb: "ep.05-koor.png",
+        youtube: "https://youtu.be/KtU5ww--3kg",
+      },
+      {
+        id: 6,
+        title: "제6회: 종교혁명선언서",
+        thumb: "ep.06-koor.png",
+        youtube: "https://youtu.be/l-Cw7woND8I",
+      },
+      {
+        id: 7,
+        title: "제7회: 무유와 전이",
+        thumb: "ep.07-koor.png",
+        youtube: "https://youtu.be/1PmZOU5kS48",
+      },
+      {
+        id: 8,
+        title: "제8회: 공·무·영 — 무유와 쿼크",
+        thumb: "ep.08-koor.png",
+        youtube: "https://youtu.be/Dw-fekBj8Z8",
+      },
+      {
+        id: 9,
+        title: "제9회: 사후세계 — 전이계",
+        thumb: "ep.09-koor.png",
+        youtube: "https://youtu.be/8xgmPHNJ1g8",
+      },
+      {
+        id: 10,
+        title: "제10회: 하나임 (Oneness)",
+        thumb: "ep.10-koor.png",
+        youtube: "https://youtu.be/vxlGrY75sXQ",
+      },
+      {
+        id: 11,
+        title: "제11회: 교황청과 기독교계에 대한 반박",
+        thumb: "ep.11-koor.png",
+        youtube: "https://youtu.be/xWXteiQq25E",
+      },
+      {
+        id: 12,
+        title: "제12회: 여호와 vs. 예수의 신(성)",
+        thumb: "ep.12-koor.png",
+        youtube: "https://youtu.be/iUudpAtrj9o",
+      },
+      {
+        id: 13,
+        title: "제13회: 십일조",
+        thumb: "ep.13-koor.png",
+        youtube: "https://youtu.be/XKuveyzkE3Q",
+      },
+      {
+        id: 14,
+        title: "제14회: 사후세계",
+        thumb: "ep.14-koor.png",
+        youtube: "https://youtu.be/GBHfoJ5WEO4",
+      },
+      {
+        id: 15,
+        title: "제15회: 모세의 출애굽",
+        thumb: "ep.15-koor.png",
+        youtube: "https://youtu.be/ut7s66h2FZs",
+      },
+      {
+        id: 16,
+        title: "제16회: 다윗과 솔로몬 제국의 허상",
+        thumb: "ep.16-koor.png",
+        youtube: "https://youtu.be/hPeLXPMlhA4",
+      },
+    ];
+
+    function getEpisodeIdFromQuery() {
+      const params = new URLSearchParams(window.location.search);
+      const raw = params.get("v");
+
+      if (!raw) return episodes[episodes.length - 1].id;
+
+      const id = parseInt(raw, 10);
+      const found = episodes.find((e) => e.id === id);
+      return found ? found.id : episodes[episodes.length - 1].id;
+    }
+
+    (function initEpisodePage() {
+      const id = getEpisodeIdFromQuery();
+      const ep = episodes.find((e) => e.id === id);
+
+      if (!ep) return;
+
+      const padded = String(ep.id).padStart(2, "0");
+
+      // 문서 타이틀
+      document.title = `${ep.title} | 신통신통회 시리즈`;
+
+      // 섬네일 이미지
+      const heroImg = document.getElementById("hero-image");
+      heroImg.src = ep.thumb;
+      heroImg.alt = ep.title;
+
+      // 시청 버튼
+      const watchBtn = document.getElementById("watch-button");
+      const watchLabel = document.getElementById("watch-label");
+      watchBtn.href = ep.youtube;
+      watchLabel.textContent = `🎬 제${padded}회 영상 보기`;
+
+      // 전체 시리즈 / 구독 링크
+      const seriesBtn = document.getElementById("series-button");
+      const subscribeBtn = document.getElementById("subscribe-button");
+
+      seriesBtn.href =
+        "https://bykim5710.github.io/series.kr/?v=" + padded;
+      subscribeBtn.href =
+        "https://bykim5710.github.io/series.kr/subscribe.html?v=" + padded;
+    })();
+  </script>
+</body>
+</html>
