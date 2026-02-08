@@ -2,147 +2,228 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <title>NCG 시리즈 – 연재 차수 안내</title>
-
+  <title>신통신통회(NCG) 시리즈 – 제1차</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- OG -->
+  <!-- 🔥 Open Graph (Facebook/Kakao) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="NCG 시리즈 – 연재 차수 안내">
-  <meta property="og:description"
-        content="신통신통회(NCG) 종교혁명 시리즈 – 제1차부터 제4차까지의 연재 안내">
-  <meta property="og:image"
-        content="https://bykim5710.github.io/series.kr/batch.04-koor.png?v=04">
-  <meta property="og:url"
-        content="https://bykim5710.github.io/series.kr/batch/batch.html">
+  <meta property="og:title" content="신통신통회(NCG) 시리즈 – 제1차">
+  <meta property="og:description" content="제1차: 종교혁명은 누가 어떻게? — 21세기 신통섭의 해법 (제1회 & 제23회)">
+  <meta property="og:image" content="https://bykim5710.github.io/series.kr/batch.01-koor.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://bykim5710.github.io/series.kr/batch/batch.html">
 
-  <!-- Twitter -->
+  <!-- 🐦 Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NCG 시리즈 – 연재 차수 안내">
-  <meta name="twitter:description"
-        content="신통신통회(NCG) 종교혁명 시리즈 – 연재 차수 안내">
-  <meta name="twitter:image"
-        content="https://bykim5710.github.io/series.kr/batch.04-koor.png?v=04">
+  <meta name="twitter:title" content="신통신통회(NCG) 시리즈 – 제1차">
+  <meta name="twitter:description" content="제1차: 종교혁명은 누가 어떻게? — 21세기 신통섭의 해법 (제1회 & 제23회)">
+  <meta name="twitter:image" content="https://bykim5710.github.io/series.kr/batch.01-koor.png">
 
   <style>
     :root {
-      --bg: #000;
+      --bg: #000000;
       --text: #f5f5f5;
       --accent: #ffd54f;
-      --border: #374151;
+      --accent2: #ff5252;
       --card: #111827;
+      --border: #374151;
       --muted: #9ca3af;
     }
 
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
+      padding: 0;
       background: var(--bg);
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                    "Apple SD Gothic Neo", "맑은 고딕", sans-serif;
+      line-height: 1.6;
     }
 
     .wrap {
       max-width: 980px;
-      margin: 0 auto;
-      padding: 24px 16px 40px;
+      margin: 0 auto 40px;
+      padding: 0 16px 40px;
     }
 
+    .hero { margin: 0 auto 24px; }
+    .hero img { display: block; width: 100%; height: auto; }
+
     h1 {
+      font-size: 1.9rem;
+      margin: 0 0 6px;
       text-align: center;
-      margin-bottom: 6px;
     }
 
     .tagline {
       text-align: center;
+      font-weight: 700;
       color: var(--accent);
-      margin-bottom: 28px;
+      margin-bottom: 20px;
+    }
+
+    p { margin: 6px 0; }
+
+    .quote {
+      margin: 16px 0 20px;
+      padding: 12px 16px;
+      border-left: 4px solid var(--accent2);
+      background: rgba(17, 24, 39, 0.85);
       font-weight: 600;
     }
 
-    .batches {
+    h2 { font-size: 1.25rem; margin: 26px 0 12px; }
+
+    .episodes {
+      margin-top: 8px;
       display: grid;
-      gap: 18px;
+      gap: 16px;
     }
 
-    .batch-card {
+    .episode-card {
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 18px;
+      border-radius: 10px;
+      padding: 14px 16px;
       background: linear-gradient(135deg, #020617, #111827);
     }
 
-    .batch-title {
-      font-size: 1.1rem;
+    .episode-title {
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
-    .batch-desc {
+    .episode-desc {
       font-size: 0.95rem;
       color: var(--muted);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 8px 14px;
       border-radius: 999px;
-      background: #2563eb;
-      color: #fff;
+      border: 1px solid var(--border);
+      background: #111827;
+      color: var(--text);
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+    }
+
+    .btn.primary { background: #2563eb; border-color: #3b82f6; }
+
+    .btn:hover {
+      background: #1f2937;
+      transform: translateY(-1px);
+      border-color: #4b5563;
+    }
+
+    .btn.primary:hover { background: #1d4ed8; border-color: #60a5fa; }
+
+    .btn-row {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .footer {
-      margin-top: 36px;
+      margin-top: 30px;
       padding-top: 16px;
       border-top: 1px solid var(--border);
-      text-align: center;
       font-size: 0.85rem;
       color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 1.55rem; }
+      .episode-card { padding: 12px 12px; }
     }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-    <h1>신통신통회(NCG) 종교혁명 시리즈</h1>
-    <div class="tagline">
-      연재 차수별 안내 페이지
+    <!-- Hero banner -->
+    <div class="hero">
+      <img src="../batch.01-koor.png" alt="신통신통회(NCG) 시리즈 – 제1차 (한글)">
     </div>
 
-    <div class="batches">
+    <!-- Title + Tagline -->
+    <h1>신통신통회(NCG) 시리즈 – 제1차</h1>
+    <div class="tagline">
+      종교혁명은 누가 어떻게? — 21세기 신통섭의 해법
+    </div>
 
-      <div class="batch-card">
-        <div class="batch-title">제2차 — 왜 종교혁명이 필요한가?</div>
-        <div class="batch-desc">
-          종교개혁의 한계를 넘어서 ‘종교혁명’이 왜 필요한지를 묻습니다. (제2–4회)
+    <!-- Main copy -->
+    <p>종교는 껍데기만 남았고, 믿음은 진리로부터 멀어졌습니다.</p>
+
+    <p><em>참된 종교는 교리가 아니라 성찰에서 시작합니다.</em>
+       오늘의 종교는 부와 권력, 외형이 진리와 양심을 대신해 왔습니다.</p>
+
+    <p>공자·부처·예수의 핵심 가르침은 놀라울 만큼 일치합니다.
+       진리를 알고, 마음을 닦고, 성실하게 살아가라는 것입니다.</p>
+
+    <p>신통신통회(NCG)는 선언합니다.</p>
+
+    <div class="quote">
+      “진리를 추구하고 신성을 실현하는 첫걸음은 종교혁명이다.”
+    </div>
+
+    <p><strong>왜곡된 교리에 대한 맹목적 복종에서 벗어나,<br>
+      21세기 참된 종교혁명에 함께해 주십시오.</strong></p>
+
+    <!-- Episodes section -->
+    <h2>🧭 종교혁명은 누가, 어떻게? — 제1회 & 제23회</h2>
+
+    <div class="episodes">
+      <div class="episode-card">
+        <div class="episode-title">1️⃣ 제1회 — 종교혁명의 태동</div>
+        <div class="episode-desc">
+          저자 소개와 신통신통회(NCG) 소개, 그리고 문제 제기의 출발점.
         </div>
-        <a class="btn" href="batch2.html">제2차 보기</a>
+        <a class="btn primary" href="https://youtu.be/o9kSstxgDaw" target="_blank" rel="noopener">
+          ▶ 제1회 시청
+        </a>
       </div>
 
-      <div class="batch-card">
-        <div class="batch-title">제3차 — 무엇이 종교혁명인가?</div>
-        <div class="batch-desc">
-          선언과 반박을 통해 종교혁명의 실체를 드러냅니다. (제5·11·6회)
+      <div class="episode-card">
+        <div class="episode-title">2️⃣ 제23회 — 종교혁명의 시작</div>
+        <div class="episode-desc">
+          교리 반문과 종교권력 책임 선언 — 성현들의 가르침을 회수하라.
         </div>
-        <a class="btn" href="batch3.html">제3차 보기</a>
+        <a class="btn primary" href="https://youtu.be/DDRD9zDiFws" target="_blank" rel="noopener">
+          ▶ 제23회 시청
+        </a>
       </div>
+    </div>
 
-      <div class="batch-card">
-        <div class="batch-title">제4차 — 사후세계의 재정의</div>
-        <div class="batch-desc">
-          사후세계 신화를 해체하고 ‘전이’의 실재를 묻습니다. (제14·7·9회)
-        </div>
-        <a class="btn" href="batch4.html">제4차 보기</a>
-      </div>
+    <!-- Bottom buttons -->
+    <div class="btn-row">
+      <a class="btn primary" href="https://bykim5710.github.io/series.kr/" target="_blank" rel="noopener">
+        📚 전체 시리즈 보기
+      </a>
 
+      <a class="btn" href="https://bykim5710.github.io/series.kr/subscribe.html?v=01" target="_blank" rel="noopener">
+        🌐 구독 / 공유
+      </a>
+
+      <a class="btn" href="batch2.html" target="_blank" rel="noopener">
+        ➜ 제2차 보기
+      </a>
     </div>
 
     <div class="footer">
-      신통신통회(新統神通會, NCG) · 종교혁명 시리즈<br>
-      “사후세계는 공상일 뿐, 전이는 실재입니다.”
+      신통신통회(新統神通會, NCG) · 종교혁명 시리즈 · 제1차 (제1회, 제23회)<br>
+      “종교개혁은 인간의 정신을 해방시키지 못했다. 오직 종교혁명만이 진리를 회복한다.”
     </div>
   </div>
 </body>
