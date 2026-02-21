@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>NCG 시리즈 – 제5차</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 🔥 카카오/페이스북/트위터용 썸네일 메타태그 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NCG 시리즈 – 제6차">
+  <meta property="og:description" content="구약성경의 권위 — 근본부터 다시 묻다. (제12·13·17회)">
+  <meta property="og:image" content="https://bykim5710.github.io/series.kr/batch.06-koor.png?v=06">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NCG 시리즈 – 제6차 썸네일">
+  <meta property="og:url" content="https://bykim5710.github.io/series.kr/batch/batch6.html">
+
+  <!-- 🐦 트위터 카드 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NCG 시리즈 – 제6차">
+  <meta name="twitter:description" content="구약성경의 권위 — 근본부터 다시 묻다. (제12·13·17회)">
+  <meta name="twitter:image" content="https://bykim5710.github.io/series.kr/batch.06-koor.png?v=06">
+
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #f5f5f5;
+      --accent: #ffd54f;
+      --accent2: #ff5252;
+      --card: #111827;
+      --border: #374151;
+      --muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "Apple SD Gothic Neo", "맑은 고딕", sans-serif;
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto 40px;
+      padding: 0 16px 40px;
+    }
+
+    .hero { margin: 0 auto 24px; }
+    .hero img { display: block; width: 100%; height: auto; }
+
+    h1 {
+      font-size: 1.9rem;
+      margin: 0 0 6px;
+      text-align: center;
+    }
+
+    .tagline {
+      text-align: center;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    p { margin: 6px 0; }
+
+    .quote {
+      margin: 16px 0 18px;
+      padding: 12px 16px;
+      border-left: 4px solid var(--accent2);
+      background: rgba(17, 24, 39, 0.85);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin: 26px 0 12px;
+    }
+
+    .episodes {
+      margin-top: 8px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .episode-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: linear-gradient(135deg, #020617, #111827);
+    }
+
+    .episode-title { font-weight: 700; margin-bottom: 4px; }
+    .episode-desc  { font-size: 0.95rem; color: var(--muted); margin-bottom: 10px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #111827;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+    }
+
+    .btn.primary { background: #2563eb; border-color: #3b82f6; }
+    .btn:hover { background: #1f2937; transform: translateY(-1px); border-color: #4b5563; }
+    .btn.primary:hover { background: #1d4ed8; border-color: #60a5fa; }
+
+    .btn-row {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 1.55rem; }
+      .episode-card { padding: 12px 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- 상단 배너 이미지 -->
+    <div class="hero">
+      <img src="../batch.05-koor.png" alt="NCG 시리즈 제6차 썸네일 (한국어)">
+    </div>
+
+    <!-- 제목 + 태그라인 -->
+    <h1>신통신통회 연재 · 제6차: “구약성경의 권위”</h1>
+    <div class="tagline">근본부터 다시 묻다.</div>
+
+    <!-- 본문: 광고 문안(한글 최종본) -->
+    <p>만약 구약의 토대가 흔들린다면, 그 위에 세운 신학은 무엇으로 버틸 수 있습니까?</p>
+    <p>6천 년 우주관은 138억 년의 우주 앞에서 무엇을 논할 수 있습니까?</p>
+
+    <div class="quote">
+      <strong>남녀와 어린아이, 가축까지 진멸하라 명한 여호와와 원수를 사랑하라 한 예수의 아버지는 동일합니까?</strong><br>
+      고대의 국세였던 십일조가 오늘날 절대적 종교 의무로 강요될 수 있습니까?<br>
+      창세기의 창조는 계시입니까,<strong>아니면 서로 다른 전통을 봉합한 편집 신화입니까?</strong>
+    </div>
+
+    <!-- 에피소드 섹션 -->
+    <h2>🧭 제6차 (제12 · 제13 · 제17회)</h2>
+
+    <div class="episodes">
+      <!-- 1️⃣ 제12회 -->
+<div class="episode-card">
+  <div class="episode-title">1️⃣ 제12회</div>
+  <div class="episode-desc">
+   여호와 vs. 예수의 신성(Godhood)<br>
+    동일한가? 다른 존재인가?
+  </div>
+  <a class="btn primary"
+     href="https://bykim5710.github.io/series.kr/episode.html?v=012"
+     target="_blank" rel="noopener">
+    ▶ 제12회 페이지 열기
+  </a>
+</div>
+
+<!-- 3️⃣ 제13회 -->
+<div class="episode-card">
+  <div class="episode-title">3️⃣ 제13회</div>
+  <div class="episode-desc">
+    십일조 — 구약의 ‘국가세금’을 ‘교회 헌금’으로 둔갑시킨 역사
+  </div>
+  <a class="btn primary"
+     href="https://bykim5710.github.io/series.kr/episode.html?v=13"
+     target="_blank" rel="noopener">
+    ▶ 제13회 페이지 열기
+  </a>
+</div>
+
+<!-- 4️⃣ 제17회 -->
+<div class="episode-card">
+  <div class="episode-title">4️⃣ 제17회</div>
+  <div class="episode-desc">
+    창세기의 천지창조<br>
+    계시인가, 신화인가?
+  </div>
+  <a class="btn primary"
+     href="https://bykim5710.github.io/series.kr/episode.html?v=17"
+     target="_blank" rel="noopener">
+    ▶ 제17회 페이지 열기
+  </a>
+</div>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn primary"
+         href="https://bykim5710.github.io/series.kr/"
+         target="_blank" rel="noopener">
+        📚 전체 시리즈 보기
+      </a>
+
+      <a class="btn"
+         href="https://bykim5710.github.io/series.kr/subscribe.html?v=06"
+         target="_blank" rel="noopener">
+        🌐 구독 / 공유
+      </a>
+    </div>
+
+    <div class="footer">
+      신통신통회(新統神通會, NCG) – 종교혁명 시리즈
