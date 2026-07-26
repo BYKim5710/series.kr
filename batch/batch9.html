@@ -5,97 +5,228 @@
   <title>NCG 시리즈 – 제9차</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- OG -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="NCG 시리즈 – 제9차">
-  <meta property="og:description" content="신약성경의 구조적 문제점 — 그리스도 복음서, 삼위일체, 동정녀 마리아">
+  <meta property="og:description" content="예수 이후 형성된 기독교 교리 — 복음서, 삼위일체와 동정녀 마리아">
   <meta property="og:image" content="https://bykim5710.github.io/series.kr/batch.09-koor.png?v=09">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NCG 시리즈 – 제9차 썸네일">
   <meta property="og:url" content="https://bykim5710.github.io/series.kr/batch/batch9.html">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NCG 시리즈 – 제9차">
+  <meta name="twitter:description" content="예수 이후 형성된 기독교 교리 — 복음서, 삼위일체와 동정녀 마리아">
+  <meta name="twitter:image" content="https://bykim5710.github.io/series.kr/batch.09-koor.png?v=09">
 
   <style>
-    body{margin:0;background:#000;color:#f5f5f5;font-family:sans-serif;line-height:1.7;}
-    .wrap{max-width:960px;margin:0 auto;padding:20px;}
-    .hero img{width:100%;}
-    h1{text-align:center;}
-    .tagline{text-align:center;color:#ffd54f;margin-bottom:20px;}
-    .quote{margin:20px 0;padding:14px;border-left:4px solid #ff5252;background:#111827;}
-    .episodes{display:grid;gap:16px;}
-    .episode-card{border:1px solid #374151;padding:14px;border-radius:10px;background:#111827;}
-    .btn{display:inline-block;margin-top:10px;padding:8px 14px;background:#2563eb;color:#fff;text-decoration:none;border-radius:20px;}
-    .footer{text-align:center;margin-top:30px;color:#9ca3af;}
+    :root {
+      --bg: #000000;
+      --text: #f5f5f5;
+      --accent: #ffd54f;
+      --accent2: #ff5252;
+      --card: #111827;
+      --border: #374151;
+      --muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "Apple SD Gothic Neo", "맑은 고딕", sans-serif;
+      line-height: 1.7;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto 40px;
+      padding: 0 16px 40px;
+    }
+
+    .hero { margin: 0 auto 24px; }
+    .hero img { display: block; width: 100%; height: auto; }
+
+    h1 {
+      font-size: 1.9rem;
+      margin: 0 0 6px;
+      text-align: center;
+    }
+
+    .tagline {
+      text-align: center;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    p { margin: 8px 0; }
+
+    .quote {
+      margin: 18px 0 20px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent2);
+      background: rgba(17, 24, 39, 0.85);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin: 28px 0 12px;
+    }
+
+    .episodes {
+      margin-top: 8px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .episode-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: linear-gradient(135deg, #020617, #111827);
+    }
+
+    .episode-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .episode-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #111827;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+    }
+
+    .btn.primary {
+      background: #2563eb;
+      border-color: #3b82f6;
+    }
+
+    .btn:hover {
+      background: #1f2937;
+      transform: translateY(-1px);
+      border-color: #4b5563;
+    }
+
+    .btn.primary:hover {
+      background: #1d4ed8;
+      border-color: #60a5fa;
+    }
+
+    .btn-row {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      h1 { font-size: 1.55rem; }
+      .episode-card { padding: 12px 12px; }
+    }
   </style>
 </head>
 
 <body>
-<div class="wrap">
+  <div class="wrap">
+    <div class="hero">
+      <img src="../batch.09-koor.png" alt="NCG 시리즈 제9차 썸네일 (한국어)">
+    </div>
 
-<div class="hero">
-  <img src="../batch.09-koor.png" alt="신통신통회 연재 제9차">
-</div>
+    <h1>신통신통회 연재 · 제9차: “예수 이후의 기독교 교리”</h1>
+    <div class="tagline">복음서, 삼위일체와 동정녀 마리아</div>
 
-<h1>신통신통회 연재 · 제9차: “신약성경의 구조적 문제점”</h1>
-<div class="tagline">그리스도 복음서 · 삼위일체 · 동정녀 마리아</div>
+    <p>오늘날 기독교 신앙의 핵심 교리들은 모두 예수가 직접 가르친 것일까요?</p>
+    <p>복음서는 예수의 생애 이후에 기록되었고, 교리는 오랜 논쟁과 종교회의를 거치며 형성되었습니다.</p>
+    <p>그 과정에서 예수의 가르침과 후대 교회의 해석은 어떻게 달라졌을까요?</p>
 
-<p>복음서들이 예수가 전한 메시지가 아니라, 후대에 재구성된 이야기라면</p>
-<p>삼위일체가 성경적 진리가 아니라, 후에 등장한 교리라면</p>
-<p>그리고 예수의 어머니 마리아가 신성한 존재가 아니라, 역사 속 한 여성이었다면</p>
+    <div class="quote">
+      교리가 역사 속에서 형성된 것이라면,<br>
+      <strong>우리는 예수의 가르침과 후대의 해석을 구분해야 하지 않을까요?</strong>
+    </div>
 
-<div class="quote">
-복음은 정말 예수가 전한 메시지였을까요,<br>
-<strong>아니면 후대가 선택하고 재구성한 이야기였을까요?</strong>
-</div>
+    <h2>🧭 제9차 (제20 · 제21 · 제22회)</h2>
 
-<div class="quote">
-삼위일체는 정말 계시된 진리일까요,<br>
-<strong>아니면 제도와 권력이 만든 교리일까요?</strong>
-</div>
+    <div class="episodes">
+      <div class="episode-card">
+        <div class="episode-title">1️⃣ 제20회 ― 예수 그리스도 복음서</div>
+        <div class="episode-desc">복음서는 누구에 의해, 언제, 어떻게 기록되었는가?</div>
+        <a class="btn primary"
+           href="https://bykim5710.github.io/series.kr/episode.html?v=20"
+           target="_blank" rel="noopener">
+          ▶ 제20회 페이지 열기
+        </a>
+      </div>
 
-<div class="quote">
-성모 마리아는 역사 속 인물이었을까요,<br>
-<strong>아니면 후대 신학이 만든 이미지였을까요?</strong>
-</div>
+      <div class="episode-card">
+        <div class="episode-title">2️⃣ 제21회 ― 삼위일체</div>
+        <div class="episode-desc">예수의 가르침인가, 후대 교회의 교리인가?</div>
+        <a class="btn primary"
+           href="https://bykim5710.github.io/series.kr/episode.html?v=21"
+           target="_blank" rel="noopener">
+          ▶ 제21회 페이지 열기
+        </a>
+      </div>
 
-<div class="quote">
-그렇다면 우리는 묻지 않을 수 없습니다.<br>
-<strong>우리가 믿는 신약성경은 과연 무엇 위에 세워져 있는 것일까요?</strong>
-</div>
+      <div class="episode-card">
+        <div class="episode-title">3️⃣ 제22회 ― 동정녀 마리아</div>
+        <div class="episode-desc">역사적 사실인가, 신학적 상징인가?</div>
+        <a class="btn primary"
+           href="https://bykim5710.github.io/series.kr/episode.html?v=22"
+           target="_blank" rel="noopener">
+          ▶ 제22회 페이지 열기
+        </a>
+      </div>
+    </div>
 
-<h2>🧭 제9차 (제20 · 제21 · 제22회)</h2>
+    <div class="btn-row">
+      <a class="btn primary"
+         href="https://bykim5710.github.io/series.kr/"
+         target="_blank" rel="noopener">
+        📚 전체 시리즈 보기
+      </a>
 
-<div class="episodes">
+      <a class="btn"
+         href="https://bykim5710.github.io/series.kr/subscribe.html?v=09"
+         target="_blank" rel="noopener">
+        🌐 구독 / 공유
+      </a>
+    </div>
 
-  <div class="episode-card">
-    <b>제20회</b><br>
-    예수 그리스도 복음서 — 분실했나, 감춰두었나?<br>
-    <a class="btn" href="https://bykim5710.github.io/series.kr/episode.html?v=20">▶ 보기</a>
+    <div class="footer">
+      신통신통회(新統神通會, NCG) – 종교혁명 시리즈
+    </div>
   </div>
-
-  <div class="episode-card">
-    <b>제21회</b><br>
-    삼위일체 교리 — 누가 무엇을 위하여?<br>
-    <a class="btn" href="https://bykim5710.github.io/series.kr/episode.html?v=21">▶ 보기</a>
-  </div>
-
-  <div class="episode-card">
-    <b>제22회</b><br>
-    동정녀 마리아 — 기독교사에서 가장 오해받는 여인<br>
-    <a class="btn" href="https://bykim5710.github.io/series.kr/episode.html?v=22">▶ 보기</a>
-  </div>
-
-</div>
-
-<div style="margin-top:20px;">
-  <a class="btn" href="https://bykim5710.github.io/series.kr/">전체 시리즈</a>
-  <a class="btn" href="https://bykim5710.github.io/series.kr/subscribe.html?v=09">구독/공유</a>
-</div>
-
-<div class="footer">
-  신통신통회(新統神通會, NCG)
-</div>
-
-</div>
 </body>
 </html>
