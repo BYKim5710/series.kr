@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="ko">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18270113660"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18270113660');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>종교혁명 전체 회차 | 제1회~제23회</title>
+
+  <meta
+    name="description"
+    content="신통신통회 종교혁명 시리즈 제1회부터 제23회까지 전체 회차를 선택하여 볼 수 있습니다.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="종교혁명 전체 회차 | 제1회~제23회">
+  <meta
+    property="og:description"
+    content="신통신통회 종교혁명 시리즈 제1회부터 제23회까지 전체 회차 목록">
+  <meta
+    property="og:url"
+    content="https://bykim5710.github.io/series.kr/episodes.html">
+
+  <style>
+
+    :root {
+      --bg: #05070c;
+      --panel: #111827;
+      --panel2: #0b1220;
+      --text: #f8fafc;
+      --muted: #a7b0c0;
+      --gold: #f4c95d;
+      --blue: #3b82f6;
+      --border: #293548;
+      --shadow: rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      background:
+        radial-gradient(
+          circle at 20% 0%,
+          rgba(59, 130, 246, 0.16),
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(244, 201, 93, 0.10),
+          transparent 30%
+        ),
+        var(--bg);
+
+      color: var(--text);
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Apple SD Gothic Neo",
+        "맑은 고딕",
+        sans-serif;
+
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .top-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 46px;
+      padding: 9px 15px;
+
+      border: 1px solid var(--border);
+      border-radius: 11px;
+
+      background: #111827;
+      color: var(--text);
+
+      text-decoration: none;
+      font-weight: 750;
+    }
+
+    .top-nav a:hover {
+      background: #1d2940;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 38px 24px;
+
+      border: 1px solid var(--border);
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(17, 24, 39, 0.98),
+          rgba(5, 7, 12, 0.95)
+        );
+
+      box-shadow: 0 16px 42px var(--shadow);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 850;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 8px 0 10px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.3;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .quick-nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+
+    .quick-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 46px;
+      min-height: 42px;
+      padding: 7px 12px;
+
+      border: 1px solid var(--border);
+      border-radius: 10px;
+
+      background: #111827;
+      color: #dfe9ff;
+
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .quick-nav a:hover {
+      background: #1d2940;
+    }
+
+    .section-title {
+      margin: 30px 0 14px;
+      font-size: 1.4rem;
+      color: var(--gold);
+    }
+
+    .episodes {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .episode-card {
+      display: block;
+
+      padding: 18px 20px;
+
+      border: 1px solid var(--border);
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--panel),
+          var(--panel2)
+        );
+
+      text-decoration: none;
+
+      transition:
+        transform .15s ease,
+        border-color .15s ease,
+        background .15s ease;
+    }
+
+    .episode-card:hover {
+      transform: translateY(-2px);
+      border-color: #5a6b84;
+      background: #141d30;
+    }
+
+    .episode-number {
+      color: #7db3ff;
+      font-weight: 850;
+      margin-bottom: 3px;
+    }
+
+    .episode-title {
+      font-size: 1.07rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .episode-desc {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .bottom-nav {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      min-height: 52px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 10px 14px;
+
+      border: 1px solid var(--border);
+      border-radius: 12px;
+
+      background: #172033;
+      color: var(--text);
+
+      text-decoration: none;
+      text-align: center;
+      font-weight: 760;
+    }
+
+    .btn:hover {
+      background: #1d2940;
+    }
+
+    .btn.primary {
+      background: var(--blue);
+      border-color: #60a5fa;
+    }
+
+    .btn.primary:hover {
+      background: #2563eb;
+    }
+
+    footer {
+      margin-top: 34px;
+      padding-top: 18px;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+
+      .episodes {
+        grid-template-columns: 1fr;
+      }
+
+      .bottom-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 30px 18px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<main class="wrap" id="top">
+
+  <div class="top-nav">
+
+    <a href="https://bykim5710.github.io/">
+      🏠 NCG 통합 포털
+    </a>
+
+    <a href="https://bykim5710.github.io/series.kr/">
+      📚 전체 시리즈
+    </a>
+
+    <a href="https://bykim5710.github.io/series/">
+      🇺🇸 English
+    </a>
+
+  </div>
+
+
+  <section class="hero">
+
+    <div class="eyebrow">
+      新統神通會 · NCG
+    </div>
+
+    <h1>
+      종교혁명 전체 회차
+    </h1>
+
+    <p class="subtitle">
+      제1회부터 제23회까지 원하는 회차를 선택하여 볼 수 있습니다.
+      각 회차를 누르면 해당 회차 페이지로 이동합니다.
+    </p>
+
+  </section>
+
+
+  <nav class="quick-nav">
+    <a href="#ep1">1</a>
+    <a href="#ep5">5</a>
+    <a href="#ep10">10</a>
+    <a href="#ep15">15</a>
+    <a href="#ep20">20</a>
+    <a href="#ep23">23</a>
+  </nav>
+
+
+  <h2 class="section-title">
+    제1회 ~ 제5회
+  </h2>
+
+  <section class="episodes">
+
+    <a class="episode-card"
+       id="ep1"
+       href="episode.html?v=01">
+
+      <div class="episode-number">
+        제1회
+      </div>
+
+      <div class="episode-title">
+        종교혁명의 태동
+      </div>
+
+      <div class="episode-desc">
+        종교혁명 시리즈의 출발점
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=02">
+
+      <div class="episode-number">
+        제2회
+      </div>
+
+      <div class="episode-title">
+        왜 종교혁명이 필요한가? — 기독교 민주주의
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=03">
+
+      <div class="episode-number">
+        제3회
+      </div>
+
+      <div class="episode-title">
+        종교개혁을 뛰어넘어
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=04">
+
+      <div class="episode-number">
+        제4회
+      </div>
+
+      <div class="episode-title">
+        기본으로 돌아가자
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       id="ep5"
+       href="episode.html?v=05">
+
+      <div class="episode-number">
+        제5회
+      </div>
+
+      <div class="episode-title">
+        기독교계에 보낸 편지
+      </div>
+
+    </a>
+
+  </section>
+
+
+  <h2 class="section-title">
+    제6회 ~ 제10회
+  </h2>
+
+  <section class="episodes">
+
+    <a class="episode-card"
+       href="episode.html?v=06">
+
+      <div class="episode-number">
+        제6회
+      </div>
+
+      <div class="episode-title">
+        종교혁명선언서
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=07">
+
+      <div class="episode-number">
+        제7회
+      </div>
+
+      <div class="episode-title">
+        무유와 전이
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=08">
+
+      <div class="episode-number">
+        제8회
+      </div>
+
+      <div class="episode-title">
+        공·무·영 — 무유와 쿼크
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=09">
+
+      <div class="episode-number">
+        제9회
+      </div>
+
+      <div class="episode-title">
+        사후세계 — 전이계
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       id="ep10"
+       href="episode.html?v=10">
+
+      <div class="episode-number">
+        제10회
+      </div>
+
+      <div class="episode-title">
+        하나임 (Oneness)
+      </div>
+
+    </a>
+
+  </section>
+
+
+  <h2 class="section-title">
+    제11회 ~ 제15회
+  </h2>
+
+  <section class="episodes">
+
+    <a class="episode-card"
+       href="episode.html?v=11">
+
+      <div class="episode-number">
+        제11회
+      </div>
+
+      <div class="episode-title">
+        교황청과 기독교계에 대한 반박
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=12">
+
+      <div class="episode-number">
+        제12회
+      </div>
+
+      <div class="episode-title">
+        여호와 vs. 예수의 신(성)
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=13">
+
+      <div class="episode-number">
+        제13회
+      </div>
+
+      <div class="episode-title">
+        십일조
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=14">
+
+      <div class="episode-number">
+        제14회
+      </div>
+
+      <div class="episode-title">
+        사후세계
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       id="ep15"
+       href="episode.html?v=15">
+
+      <div class="episode-number">
+        제15회
+      </div>
+
+      <div class="episode-title">
+        모세의 출애굽
+      </div>
+
+    </a>
+
+  </section>
+
+
+  <h2 class="section-title">
+    제16회 ~ 제20회
+  </h2>
+
+  <section class="episodes">
+
+    <a class="episode-card"
+       href="episode.html?v=16">
+
+      <div class="episode-number">
+        제16회
+      </div>
+
+      <div class="episode-title">
+        다윗과 솔로몬 제국의 허상
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=17">
+
+      <div class="episode-number">
+        제17회
+      </div>
+
+      <div class="episode-title">
+        창세기의 천지창조
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=18">
+
+      <div class="episode-number">
+        제18회
+      </div>
+
+      <div class="episode-title">
+        예수의 탄생과 생애
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=19">
+
+      <div class="episode-number">
+        제19회
+      </div>
+
+      <div class="episode-title">
+        예수의 죽음, 부활과 승천
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       id="ep20"
+       href="episode.html?v=20">
+
+      <div class="episode-number">
+        제20회
+      </div>
+
+      <div class="episode-title">
+        예수 그리스도 복음
+      </div>
+
+    </a>
+
+  </section>
+
+
+  <h2 class="section-title">
+    제21회 ~ 제23회
+  </h2>
+
+  <section class="episodes">
+
+    <a class="episode-card"
+       href="episode.html?v=21">
+
+      <div class="episode-number">
+        제21회
+      </div>
+
+      <div class="episode-title">
+        삼위일체
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       href="episode.html?v=22">
+
+      <div class="episode-number">
+        제22회
+      </div>
+
+      <div class="episode-title">
+        동정녀 마리아
+      </div>
+
+    </a>
+
+
+    <a class="episode-card"
+       id="ep23"
+       href="episode.html?v=23">
+
+      <div class="episode-number">
+        제23회
+      </div>
+
+      <div class="episode-title">
+        종교혁명의 시작
+      </div>
+
+    </a>
+
+  </section>
+
+
+  <div class="bottom-nav">
+
+    <a
+      class="btn"
+      href="#top">
+      ↑ 맨 위로
+    </a>
+
+    <a
+      class="btn primary"
+      href="https://bykim5710.github.io/series.kr/">
+      📚 전체 시리즈 보기
+    </a>
+
+    <a
+      class="btn"
+      href="https://bykim5710.github.io/series.kr/subscribe.html">
+      🌐 구독 / 공유
+    </a>
+
+  </div>
+
+
+  <footer>
+    신통신통회(新統神通會, NCG) · the Religious Revolution · 전체 회차
+  </footer>
+
+</main>
+
+</body>
+</html>
